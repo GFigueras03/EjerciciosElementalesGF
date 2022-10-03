@@ -61,30 +61,9 @@ public class EjerciciosElementalesGF {
          * x2 = x3;
          * System.out.println(x3);
          * }
-         * //FIBONACCI CON ARRAYS
-         * 
-         * Integer[] numeros = {1,1,2};
-         * 
-         * for(Integer i = 1; i<= 8; i++){
-         * numeros[2] = numeros[1] + numeros[0];
-         * numeros[0] = numeros[1];
-         * numeros[1] = numeros[2];
-         * System.out.println(numeros[2]);
-         * }
          */
-        /*
-         * int N = 8;
-         * Integer[] numeros = {1,1,2};
-         * Integer[] result = new Integer[3];
-         * 
-         * for(Integer i = 0; i<= N; i++){
-         * numeros[2] = numeros[1] + numeros[0];
-         * numeros[0] = numeros[1];
-         * numeros[1] = numeros[2];
-         * System.out.println(numeros[2]);
-         * }
-         */
-
+         //FIBONACCI CON ARRAYS
+        
         int N = 8;
         int fibbo[] = new int[3];
         fibbo[0] = 1;
