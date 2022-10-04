@@ -75,35 +75,33 @@ public class EjerciciosElementalesGF {
             System.out.println(result[i]);
             }
         
-        ?=====> FORMA 2 <=====?
-        int N = 20;
-        int fibbo[] = new int[N];
-        fibbo[0] = 1;
-        fibbo[1] = 1;
-         x(n) = x(n-1) + x(n-2) //*FORMULA
-
-        for (int i = 2; i < N; i++) {
-            fibbo[i] = fibbo[i - 1] + fibbo[i - 2];
-        } // FOR
-        for (int i = 0; i < fibbo.length; i++) {
-            System.out.println(fibbo[i]);
-        } // FOR2
-
-        */  
-        //!Ejercicio 4 CAPICUA
+    ?=====> FORMA 2 <=====?
+    int N = 20;
+    int fibbo[] = new int[N];
+    fibbo[0] = 1;
+    fibbo[1] = 1;
+     x(n) = x(n-1) + x(n-2) //*FORMULA
+    for (int i = 2; i < N; i++) {
+        fibbo[i] = fibbo[i - 1] + fibbo[i - 2];
+    } // FOR
+    for (int i = 0; i < fibbo.length; i++) {
+        System.out.println(fibbo[i]);
+    } // FOR2
+    */  
+    //!Ejercicio 4 CAPICUA
         //PASO 1 MODULO 10
         //PASO 2 DIVIDIR / 10 Y GUARDAR VALORES
     //*=====> TEORIA <=====*
-    // System.out.println(N%10); //?PRIMERA CIFRA
-    // System.out.println((N/10)%10);//!SEGUNDA CIFRA
-    // System.out.println(((N/10)/10)%10);//*TERCERA CICRA
+        // System.out.println(N%10); //?PRIMERA CIFRA
+        // System.out.println((N/10)%10);//!SEGUNDA CIFRA
+        // System.out.println(((N/10)/10)%10);//*TERCERA CICRA
     // System.out.println((((N/10)/10)/10)%10);//CUARTA CIFRA
 
 
-    //sout(arr[0]*10^3)  // 3000
-    //sout(arr[1]*10^2)  // 400
-    //sout(arr[2]*10^1)  // 50
-    //sout(arr[3]*10^0)  // 1
+    //sout(arr[0]*10^3)  // 1000
+    //sout(arr[1]*10^2)  // 500
+    //sout(arr[2]*10^1)  // 40
+    //sout(arr[3]*10^0)  // 3
 
     //sout(arr[i]*10^(tamaño-1)-i)
     
@@ -132,7 +130,7 @@ public class EjerciciosElementalesGF {
         x = x + cifras[i]*Math.pow(10,tamaño - (i+1));
         }//?FOR
         System.out.println((int)x);
-        
+
     if(x == N){
          System.out.println("EL NUMERO ES CAPICUA");
         }//?IF
