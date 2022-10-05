@@ -1,6 +1,6 @@
 package com.tiernoparla.ejercicioselementalesgf;
 
-//import java.util.*;
+import java.util.*;
 //import java.lang.Math;
 
 
@@ -37,7 +37,7 @@ public class EjerciciosElementalesGF {
     }
     */
     //*===>EJ7 METODO MEDIA <===
-    /* 
+     /*
     static void myMedia(){
         int tamaño;
         Scanner sc = new Scanner(System.in);
@@ -49,14 +49,18 @@ public class EjerciciosElementalesGF {
             System.out.println("Cual es el numero" + " " + i);
             result[i] = sc.nextInt();
         } //!BUCLE 1
+
         System.out.println("estos son los numeros escogidos");
-        for(int i = 0;i < result.length; i++){
+
+        for(int i = 0; i < result.length; i++){
            System.out.print("numero" + i + "= " + result[i] + " ");
            suma = suma + result[i];
         }//!BUCLE2
+
         System.out.println("\n" + "ESTA ES LA MEDIA:" + "\n" + (double)suma / tamaño); 
     }
     */
+    
     //*===>EJ8 METODO CHAR MEDIO STRING <===
     /* 
     static void myChar(String palabra){
@@ -74,6 +78,7 @@ public class EjerciciosElementalesGF {
             System.out.println("AL SER UNA PALABRA PAR ESTOS SON SUS DOS CARACTERES DEL MEDIO: " + letras[posicion]+ "" + "" +  letras[impar]);
          }
     }
+    //SUBSTRING
     */
     
     public static void main(String[] args) {
@@ -228,13 +233,33 @@ public class EjerciciosElementalesGF {
     //CREAMOS EL METODO ARRIBA
     //LO LLAMAMOS AQUI ABAJO
     //?myMenorNumber(44,41,66,3,66,102,102,21);
-
-
+    //*SIN MATH.MIN()
+    /*
+        int[] numeros = {0,100,22,1550,12,-1,44,221,13,-12,17,-170};
+        int y = numeros[0];
+        for(int i = 0; i< numeros.length; i++){
+           if(y > numeros[i]){
+               y = numeros[i];
+           }else{
+               y = y;
+           }
+        }
+            System.out.println(y);
+            */
   //!Ejercicio 7 MEDIA DE X NUMEROS
     //CREAMOS EL METODO ARRIBA
     //LO LLAMAMOS AQUI ABAJO
-    //?myMedia();
-
+   // myMedia();
+   //*HECHO EN CLASE
+   //?FORMA 1
+    int[] n = {1,4,5,7};
+    int suma = 0;
+    for(int i= 0; i<n.length; i++){
+        suma = suma + n[i];
+    }
+    System.out.println(suma);
+    System.out.println((double)suma / n.length);
+    
   //!Ejercicio 8 STRING PALABRA DEL MEDIO
   //  myChar("GUILLERMO");
 
