@@ -1,10 +1,81 @@
 package com.tiernoparla.ejercicioselementalesgf;
 
 //import java.util.*;
-// import java.lang.Math;
+//import java.lang.Math;
+
 
 public class EjerciciosElementalesGF {
+    //*===>EJ5 METODO CAPICUA <===*
+    /* 
+    static void myCapicua(int N){
+        int aux, inverso = 0, cifra;
+        aux = N;
+        while(aux != 0){
+            cifra = aux % 10;
+            inverso = inverso * 10 + cifra;
+            aux = aux / 10;
+        }
+        if(N == inverso){
+            System.out.println(true);
+        }else{
+            System.out.println(false);
+        }
+    }
+    */
+    //*===>EJ6 METODO NUMERO MENOR <=== MODO FACIL
+    /* 
+    static void myMenorNumber(int n,int n1,int n2,int n3,int n4, int n5, int n6, int n7){
+        int op1 = Math.min(n,n1);
+        int op2 = Math.min(n2, n3);
+        int op3 = Math.min(n4, n5);
+        int op4 = Math.min(n6, n7);
+        int res1 = Math.min(op1, op2);
+        int res2 = Math.min(op3, op4);
+        int opFinal = Math.min(res1, res2);
+        System.out.println(opFinal);
 
+    }
+    */
+    //*===>EJ7 METODO MEDIA <===
+    /* 
+    static void myMedia(){
+        int tamaño;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Cuantos numeros vas a utlizar??");
+        tamaño = sc.nextInt();
+        int suma = 0;
+        int result[] = new int[tamaño];
+        for(int i = 0; i < tamaño; i++){
+            System.out.println("Cual es el numero" + " " + i);
+            result[i] = sc.nextInt();
+        } //!BUCLE 1
+        System.out.println("estos son los numeros escogidos");
+        for(int i = 0;i < result.length; i++){
+           System.out.print("numero" + i + "= " + result[i] + " ");
+           suma = suma + result[i];
+        }//!BUCLE2
+        System.out.println("\n" + "ESTA ES LA MEDIA:" + "\n" + (double)suma / tamaño); 
+    }
+    */
+    //*===>EJ8 METODO CHAR MEDIO STRING <===
+    /* 
+    static void myChar(String palabra){
+        System.out.println("LA PALABRA: " + palabra + " TIENE " + palabra.length() + " CHARACTERES");
+        char[] letras = new char[palabra.length()];
+        int posicion = palabra.length() / 2;
+        int impar = posicion--;
+        int i = 0;
+        for(i = 0;i<palabra.length(); i++){
+            letras[i] = palabra.charAt(i);
+        }
+         if(palabra.length()%2 != 0){
+            System.out.println("AL SER UNA PALABRA IMPAR ESTA ES CARACTER DEL MEDIO: " + letras[posicion]);
+         }else{
+            System.out.println("AL SER UNA PALABRA PAR ESTOS SON SUS DOS CARACTERES DEL MEDIO: " + letras[posicion]+ "" + "" +  letras[impar]);
+         }
+    }
+    */
+    
     public static void main(String[] args) {
         //!=====> EJERCICIO 1 <=====!
         /*
@@ -105,11 +176,14 @@ public class EjerciciosElementalesGF {
 
     //sout(arr[i]*10^(tamaño-1)-i)
     
-    int N = 3451;
+    /*
+     ?=====>  <=====?
+    int N = 5005; 
     String tamaño1 = Integer.toString(N);
     int tamaño = tamaño1.length();
     int tmp = N;
-    int cifras[] = new int[tamaño]
+    int cifras[] = new int[tamaño];
+    */
     //!======> SACAR CIFRAS <======!
     /*
     for(int i = 0; i<tamaño; i++){
@@ -118,26 +192,52 @@ public class EjerciciosElementalesGF {
       }
     */
     //!=====> SACAR CIFRAS Y GUARDARLAS <=====!
+    /*
+    ?=====>  <=====?
     for(int i = 0; i< tamaño; i++){
         cifras[i] = tmp % 10;
         System.out.println(cifras[i]);
         tmp = tmp / 10;
     }
-    
+    */
      //!=====>PAS0 3 RECUPERAR NUMERO <=====!
+     /* 
+     ?=====>  <=====?
     double x = 0;
     for(int i = 0; i < tamaño; i++){
         x = x + cifras[i]*Math.pow(10,tamaño - (i+1));
-        }//?FOR
+        }//FOR
         System.out.println((int)x);
 
     if(x == N){
          System.out.println("EL NUMERO ES CAPICUA");
-        }//?IF
+        }//IF
         
     else{
          System.out.println("EL NUMERO NO ES CAPICUA");
-        }//?ELSE
+        }//ELSE
+        */
+   //!Ejercicio 5 CAPICUA EN METODO
+    //CREAMOS EL METODO ARRIBA
+    //LO LLAMAMOS AQUI ABAJO
+    //?myCapicua(123454321);
 
 
-}
+
+   //!Ejercicio 6 MENOR DE X NUMEROS
+    //CREAMOS EL METODO ARRIBA
+    //LO LLAMAMOS AQUI ABAJO
+    //?myMenorNumber(44,41,66,3,66,102,102,21);
+
+
+  //!Ejercicio 7 MEDIA DE X NUMEROS
+    //CREAMOS EL METODO ARRIBA
+    //LO LLAMAMOS AQUI ABAJO
+    //?myMedia();
+
+  //!Ejercicio 8 STRING PALABRA DEL MEDIO
+  //  myChar("GUILLERMO");
+
+    } //TODOPSVM
+}//TODOFINAL
+
