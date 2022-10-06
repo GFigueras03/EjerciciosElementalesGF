@@ -92,6 +92,26 @@ public class EjerciciosElementalesGF {
              }
         }
     */
+    //*===>EJ9 CONTAR VOCALES(VERSION METODO)<===*
+    /* 
+    static void myVocals(String palabra){
+        char a = 'a';
+        char e = 'e';
+        char i = 'i';
+        char o = 'o';
+        char u = 'u';
+        palabra = palabra.toLowerCase();
+        char[] arr = new char[palabra.length()];
+        int recuento = 0;
+        for(int y = 0; y< palabra.length(); y++){
+            arr[y] = palabra.charAt(y);
+            if(arr[y] == a || arr[y] == e || arr[y] == i || arr[y] == o || arr[y] == u){
+                recuento= recuento + 1;
+            }
+        }
+        System.out.println("la palabra " + palabra + " tiene " + palabra.length() + " caracteres y " + recuento + " vocales");
+    }
+    */
     //!}
     public static void main(String[] args) {
     //!=====> EJERCICIO 1 <=====!
@@ -287,6 +307,27 @@ for(int i = 0;i<palabra.length(); i++){
     System.out.println(x + y);
   */
     //myChar2("GUILLERMO");
+
+    //!Ejercicio 9 CONTAR VOCALES
+    /* //?SIN METODO
+    String palabra = "";
+    char a = 'a';
+    char e = 'e';
+    char i = 'i';
+    char o = 'o';
+    char u = 'u';
+    char[] arr = new char[palabra.length()];
+    int recuento = 0;
+    for(int y = 0; y< palabra.length(); y++){
+        arr[y] = palabra.charAt(y);
+        if(arr[y] == a || arr[y] == e || arr[y] == i || arr[y] == o || arr[y] == u){
+            recuento= recuento + 1;
+        }
+    }
+    System.out.println("la palabra " + palabra + " tiene " + recuento + " vocales");
+    */
+    myVocals("Guillermo");
+
 
     } //TODOPSVM
 }//TODOFINAL
