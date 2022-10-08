@@ -1,6 +1,6 @@
 package com.tiernoparla.ejercicioselementalesgf;
 
-//import java.util.*;
+import java.util.*;
 //import java.lang.Math;
 
 
@@ -92,7 +92,7 @@ public class EjerciciosElementalesGF {
              }
         }
     */
-    //*===>EJ9 CONTAR VOCALES(VERSION METODO)<===*
+    //*===>EJ9 CONTAR VOCALES(VERSION METODO / MODO FACIL)<===*
     /* 
     static void myVocals(String palabra){
         char a = 'a';
@@ -326,8 +326,25 @@ for(int i = 0;i<palabra.length(); i++){
     }
     System.out.println("la palabra " + palabra + " tiene " + recuento + " vocales");
     */
-    myVocals("Guillermo");
+    //myVocals("Guillermo");
+    //!EJERCICIO CON MATRICES
+     
+    String vocales = "aeiou";
+    String palabra;
+    int suma = 0;
+    Scanner sc = new Scanner(System.in);
 
+    palabra = sc.nextLine().toLowerCase();
+    for(int i = 0; i< palabra.length(); i++ ){
+        for(int j = 0; j< vocales.length(); j++){
+            if(palabra.charAt(i) == vocales.charAt(j)){
+                suma++;
+                break;
+            }
+        }
+    }
+    System.out.println("la palabra " + palabra + " posee " + suma + " vocales");
+    
 
     } //TODOPSVM
 }//TODOFINAL
