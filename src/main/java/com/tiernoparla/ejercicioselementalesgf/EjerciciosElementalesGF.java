@@ -93,7 +93,7 @@ public class EjerciciosElementalesGF {
         }
     */
     //*===>EJ9 CONTAR VOCALES(VERSION METODO / MODO FACIL)<===*
-    /* 
+     /*
     static void myVocals(String palabra){
         char a = 'a';
         char e = 'e';
@@ -112,6 +112,21 @@ public class EjerciciosElementalesGF {
         System.out.println("la palabra " + palabra + " tiene " + palabra.length() + " caracteres y " + recuento + " vocales");
     }
     */
+    //*===>EJ12 METODO INTERES)<===*
+    /*
+    static void myInteres(double c0, double n, double i){
+        double porcentaje = 0;
+        porcentaje = (c0 * i) / 100;
+        porcentaje = (porcentaje * 1) /12;
+        porcentaje = (porcentaje * n);
+        System.out.println("El interes simple de: \n" + "Cantidad inicial: " + (int)c0 + " Euros\n"
+         + "Interes: " + (int)i +"% \n" + "A:" + (int)n + "meses"+ "\nEs igual a " + porcentaje );
+        System.out.print("\n" + "la suma de la cantidad inicial mas el interes a x meses es igual a = ");
+        System.out.print(porcentaje + c0);
+        
+       
+    }
+*/
     //!}
     public static void main(String[] args) {
     //!=====> EJERCICIO 1 <=====!
@@ -295,19 +310,19 @@ public class EjerciciosElementalesGF {
     //?MODO 2
     //MODO BUGGEADO
     /*
- String palabra = "CINCO";
+    String palabra = "CINCO";
     char[] letras = new char[palabra.length()];
 
-for(int i = 0;i<palabra.length(); i++){
-    letras[i] = palabra.charAt(i);
-    System.out.println(letras[i]);
-}
+    for(int i = 0;i<palabra.length(); i++){
+        letras[i] = palabra.charAt(i);
+        System.out.println(letras[i]);
+    }
     String x = palabra.substring(0, palabra.length()/2);
     String y  = palabra.substring((palabra.length()/2)+1, palabra.length());
     System.out.println(x + y);
-  */
-    //myChar2("GUILLERMO");
 
+    //myChar2("GUILLERMO");
+    */
     //!Ejercicio 9 CONTAR VOCALES
     /* //?SIN METODO
     String palabra = "";
@@ -328,7 +343,7 @@ for(int i = 0;i<palabra.length(); i++){
     */
     //myVocals("Guillermo");
     //!EJERCICIO CON MATRICES
-     
+    /*
     String vocales = "aeiou";
     String palabra;
     int suma = 0;
@@ -345,6 +360,39 @@ for(int i = 0;i<palabra.length(); i++){
     }
     System.out.println("la palabra " + palabra + " posee " + suma + " vocales");
     
+    */
+    //!PROFE
+    /*
+    String palabra = "abcdef";
+    int suma = 0;
+    for(char c : palabra.toCharArray()){
+       if(c == 'a' ||  c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+           suma++;
+       }  
+    }
+    System.out.println(suma);
+
+
+    */
+
+    //!Ejercicio 11 SUMA DE DIGITOS DE UN ENTERO
+    /*
+    Integer numero = 1234;
+    String cadena;
+    Integer suma = 0;
+    cadena = numero.toString();
+    Integer array[] = new Integer[cadena.length()];
+
+    for(int i = 0; i< cadena.length(); i++){
+        array[i] = Integer.parseInt(cadena.substring(i, i + 1));
+        suma = suma + array[i];
+    }
+    System.out.println("la suma de los digitos de " +numero +" es igual a = " + suma);
+    */
+
+    //!EJERCICIO 12
+    //? cantidad inicial, interes (porcentaje), tiempo (en meses)
+   // myInteres(10000, 5, 4);
 
     } //TODOPSVM
 }//TODOFINAL
