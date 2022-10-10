@@ -374,6 +374,22 @@ public class EjerciciosElementalesGF {
 
 
     */
+    //!Ejercicio 10 CONTAR PALABRAS
+    String palabras = "Esta es una frase  con algun que o trro  caracter en medio   f";
+    String arr[] = palabras.split(" ");
+    int contador = 0;
+    
+    for(int i = 0; i < arr.length; i ++){
+        System.out.println(arr[i]);
+        if(arr[i] != "  "){
+            contador++;
+        }else {
+            break;
+        }
+    }
+    String resultado = palabras.replaceAll("\\s", ".");
+    System.out.println(palabras.split("\\s+").length);
+    System.out.println(resultado);
 
     //!Ejercicio 11 SUMA DE DIGITOS DE UN ENTERO
     /*
