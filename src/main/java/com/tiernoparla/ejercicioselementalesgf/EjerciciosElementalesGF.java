@@ -137,6 +137,53 @@ public class EjerciciosElementalesGF {
         }
     }
     */
+    //*===>EJERCICIO 14 CONTRASEÑA<===*
+    /*
+    static void myPass(){
+        //DECLARACIONES
+        Scanner sc = new Scanner(System.in);
+        String contraseña;
+        String numeros = "1234567890";
+        String caracteresEspeciales = "!·$%&/()=ª!?¿¡'`^+*çÇ´¨-_.:,;<>";
+        String cadena = " ";
+        int sumaNumeros = 0; //= SUMA DE NUMEROS
+        int sumaCaracteres = 0; //=SUMA DE CARACTERES
+        cadena = caracteresEspeciales.toString();
+        //
+
+        //?DECLARACION DE LA CONTRASEÑA
+        System.out.println("introduce una contraseña");
+        contraseña = sc.nextLine();
+        //?
+
+        for(int i = 0; i< contraseña.length(); i++ ){
+            //!IDENTIFICAR NUMEROS
+            for(int j = 0; j< numeros.length(); j++){
+                if(contraseña.charAt(i) == numeros.charAt(j)){
+                    sumaNumeros++;
+                }//?IF
+            }//?FOR2
+            //!IDENTIFICAR CARACTERES
+            for(int k = 0; k < caracteresEspeciales.length(); k++){
+                if(contraseña.charAt(i) == cadena.charAt(k)){
+                    sumaCaracteres++;
+                }//?IF2
+            }//?FOR3
+        }//?FOR
+
+        if(sumaNumeros >=2 && contraseña.length()>= 10 && sumaCaracteres == 0){
+          System.out.println("la contraseña contiene "+ contraseña.length() + " caracteres"
+           + " y " + sumaNumeros + " de ellos son numeros");
+        }//?IF (si hay 2 o mas de 2 numeros, la suma de caracteres de la contraseña es mayor o igual a 10, y No hay ningun caracter)  )
+        else if(sumaNumeros < 2 || contraseña.length()< 10 || sumaCaracteres>=1){
+            System.out.println("Tu contraseña no cumple uno de los requisitos" + "\n" + 
+            " La contraseña debe tener minimo 10 caracteres" +
+            "\n de ellos 2 minimo deben ser letras y no puede contener ningun caracter especial");
+            myPass();//?VOLVEMOS A EJECUTAR LA FUNCION
+        }//!PERO, si hay menos de 2 numeros, o , la contraseña tiene menos de 10 caracteres, o contiene algun caracter especial, HACEMOS QUE REPITA LA FUNCION HASTA QUE SEA CORRECTA)
+
+    }
+    */
     //!}
     public static void main(String[] args) {
     //!=====> EJERCICIO 1 <=====!
@@ -423,39 +470,8 @@ public class EjerciciosElementalesGF {
     //!EJERCICIO 13 AÑO BISIESTO
     //myYear(1064);
     //!EJERCICIO 14 PASSWORD
-    Scanner sc = new Scanner(System.in);
-    String contraseña;
+    //myPass();
     
-      String numeros = "1234567890";
-      String cadena = " ";
-      cadena = numeros.toString();
-      int suma = 0;
-        
-     System.out.println("introduce una contraseña");
-     contraseña = sc.nextLine();
-    if(contraseña.length()> 9){
-        System.out.println("Contraseña con mas de 10 digitos");
-    }
-    while(contraseña.length()< 10){
-        System.out.println("la contraeña tiene que tener 10 digitos, intentelo de nuevo");
-        contraseña = sc.nextLine();
-    }
-    for(int i = 0; i< contraseña.length(); i++ ){
-        for(int j = 0; j< numeros.length(); j++){
-            if(contraseña.charAt(i) == numeros.charAt(j)){
-                suma++;
-                break;
-            }
-           
-        }
-    }
-    if(suma < 2){
-        System.out.println("la contraseña tiene que tener 2 o mas numeeros");
-        contraseña = sc.nextLine();
-    }else if(suma > 2){
-        System.out.println("contraseña correcta");
-    }
-        
     } //TODOPSVM
 }//TODOFINAL
 
