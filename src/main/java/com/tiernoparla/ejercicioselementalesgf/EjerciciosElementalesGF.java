@@ -1,10 +1,6 @@
 package com.tiernoparla.ejercicioselementalesgf;
-
-import java.util.Scanner;
-
 import java.util.*;
-//import java.lang.Math;
-
+import java.lang.Math;
 
 public class EjerciciosElementalesGF {
     //!FUNCIONES{
@@ -115,18 +111,25 @@ public class EjerciciosElementalesGF {
     }
     */
     //*===>EJERCICIO 12 METODO INTERES)<===*
-    /* 
+     
     static void myInteres(double cantidadInicial, double numeroMeses, double interes){
-        double operacion = 0;
-        operacion = (cantidadInicial * interes) / 100;
-        operacion = (operacion * 1) /12;
-        operacion = (operacion * numeroMeses);
-        System.out.println("El interes simple de: \n" + "Cantidad inicial: " + cantidadInicial + " Euros\n"
-         + "Interes: " + interes +"% \n" + "A:" + (int)numeroMeses + " meses"+ "\nEs igual a " + operacion + " Euros");
-        System.out.print("\n" + "la suma de la cantidad inicial mas el interes a x meses es igual a = ");
-        System.out.print(operacion + cantidadInicial + " Euros \n");
+       
+
+        for(int i = 0; i< 10; i++){
+            double operacion = 0;
+            operacion = (cantidadInicial * interes) / 100;
+            operacion = (operacion * 1) /12;
+            operacion = (operacion * numeroMeses);
+            // System.out.println("El interes simple de: \n" + "Cantidad inicial: " + cantidadInicial + " Euros\n"
+            //  + "Interes: " + interes +"% \n" + "A:" + (int)numeroMeses + " meses"+ "\nEs igual a " + operacion + " Euros");
+            // System.out.print("\n" + "la suma de la cantidad inicial mas el interes a x meses es igual a = ");
+            System.out.print("año " + i + " ");
+            System.out.print((float)operacion + (float)cantidadInicial + " Euros \n");
+            cantidadInicial = operacion + cantidadInicial;
+
+        }
     }
-    */
+    
     //*===>EJERCICIO 13 AÑO BISIESTO)<===*
     /*
     static void myYear(int numero){
@@ -432,21 +435,22 @@ public class EjerciciosElementalesGF {
 
     */
     //!Ejercicio 10 CONTAR PALABRAS
-    /* 
-    String palabras = "holaa me  llamo guiller mo Figueras  jime nez ";
-    String arr[] = palabras.split(" ");
-     int contador = 0;
-     for(int i = 0; i < arr.length; i ++){
-         System.out.println(arr[i]);
-         if(arr[i] != "  "){
-             contador++;
-         }else {
-             break;
-         }
-     }
-     String resultado = palabras.replaceAll("\\s", ".");
+    /*
+    String palabras = " 5holaa me  llamo guiller mo Figueras  jime nez";
+    palabras = palabras.trim();
     System.out.println(palabras.split("\\s+").length);
-    System.out.println(resultado);
+    */
+    /*  
+    String arr[] = palabras.split(" ");
+      int contador = 0;
+      for(int i = 0; i < arr.length; i ++){
+          System.out.println(arr[i]);
+          if(arr[i] != "  "){
+              contador++;
+          }else {
+              break;
+          }
+      }
     */
     //!Ejercicio 11 SUMA DE DIGITOS DE UN ENTERO
     /*
@@ -461,11 +465,13 @@ public class EjerciciosElementalesGF {
         suma = suma + array[i];
     }
     System.out.println("la suma de los digitos de " +numero +" es igual a = " + suma);
-    */
-
+    
+*/
     //!EJERCICIO 12 INTERES
     //? cantidad inicial, interes (porcentaje), tiempo (en meses)
-    //myInteres(10000, 5, 4);
+    myInteres(100,12 , 5);
+    //EMPIEZAS CON UN INTERES A X AÑOS 
+
 
     //!EJERCICIO 13 AÑO BISIESTO
     //myYear(1064);
