@@ -1,12 +1,12 @@
 package com.tiernoparla.ejercicioselementalesgf;
 
-import java.util.*;
+//import java.util.*;
 //import java.lang.Math;
 
 
 public class EjerciciosElementalesGF {
     //!FUNCIONES{
-    //*===>EJ5 METODO CAPICUA <===*
+    //*===>EJERCICIO 5 METODO CAPICUA <===*
     /* 
     static void myCapicua(int N){
         int aux, inverso = 0, cifra;
@@ -23,7 +23,7 @@ public class EjerciciosElementalesGF {
         }
     }
     */
-    //*===>EJ6 METODO NUMERO MENOR <=== MODO FACIL
+    //*===>EJERCICIO 6 METODO NUMERO MENOR <=== MODO FACIL
     /* 
     static void myMinorNumber(int n,int n1,int n2,int n3,int n4, int n5, int n6, int n7){
         int op1 = Math.min(n,n1);
@@ -37,7 +37,7 @@ public class EjerciciosElementalesGF {
 
     }
     */
-    //*===>EJ7 METODO MEDIA <===*
+    //*===>EJERCICIO 7 METODO MEDIA <===*
      /*
     static void myMedia(){
         int tamaño;
@@ -61,7 +61,7 @@ public class EjerciciosElementalesGF {
         System.out.println("\n" + "ESTA ES LA MEDIA:" + "\n" + (double)suma / tamaño); 
     }
     */
-    //*===>EJ8 METODO CHAR MEDIO STRING <===*
+    //*===>EJERCICIO 8 METODO CHAR MEDIO STRING <===*
     /*
     static void myChar(String palabra){
         System.out.println("LA PALABRA: " + palabra + " TIENE " + palabra.length() + " CHARACTERES");
@@ -92,7 +92,7 @@ public class EjerciciosElementalesGF {
              }
         }
     */
-    //*===>EJ9 CONTAR VOCALES(VERSION METODO / MODO FACIL)<===*
+    //*===>EJERCICIO 9 CONTAR VOCALES(VERSION METODO / MODO FACIL)<===*
      /*
     static void myVocals(String palabra){
         char a = 'a';
@@ -112,21 +112,29 @@ public class EjerciciosElementalesGF {
         System.out.println("la palabra " + palabra + " tiene " + palabra.length() + " caracteres y " + recuento + " vocales");
     }
     */
-    //*===>EJ12 METODO INTERES)<===*
-    /*
-    static void myInteres(double c0, double n, double i){
-        double porcentaje = 0;
-        porcentaje = (c0 * i) / 100;
-        porcentaje = (porcentaje * 1) /12;
-        porcentaje = (porcentaje * n);
-        System.out.println("El interes simple de: \n" + "Cantidad inicial: " + (int)c0 + " Euros\n"
-         + "Interes: " + (int)i +"% \n" + "A:" + (int)n + "meses"+ "\nEs igual a " + porcentaje );
+    //*===>EJERCICIO 12 METODO INTERES)<===*
+    /* 
+    static void myInteres(double cantidadInicial, double numeroMeses, double interes){
+        double operacion = 0;
+        operacion = (cantidadInicial * interes) / 100;
+        operacion = (operacion * 1) /12;
+        operacion = (operacion * numeroMeses);
+        System.out.println("El interes simple de: \n" + "Cantidad inicial: " + cantidadInicial + " Euros\n"
+         + "Interes: " + interes +"% \n" + "A:" + (int)numeroMeses + " meses"+ "\nEs igual a " + operacion + " Euros");
         System.out.print("\n" + "la suma de la cantidad inicial mas el interes a x meses es igual a = ");
-        System.out.print(porcentaje + c0);
-        
-       
+        System.out.print(operacion + cantidadInicial + " Euros \n");
     }
-*/
+    */
+    //*===>EJERCICIO 13 AÑO BISIESTO)<===*
+    /*
+    static void myYear(int numero){
+        if(numero%4 != 0){
+            System.out.println("El año no es bisiesto");
+        }else{
+            System.out.println("El año es bisiesto");
+        }
+    }
+    */
     //!}
     public static void main(String[] args) {
     //!=====> EJERCICIO 1 <=====!
@@ -375,22 +383,22 @@ public class EjerciciosElementalesGF {
 
     */
     //!Ejercicio 10 CONTAR PALABRAS
-    String palabras = "Esta es una frase  con algun que o trro  caracter en medio   f";
+    /* 
+    String palabras = "holaa me  llamo guiller mo Figueras  jime nez ";
     String arr[] = palabras.split(" ");
-    int contador = 0;
-    
-    for(int i = 0; i < arr.length; i ++){
-        System.out.println(arr[i]);
-        if(arr[i] != "  "){
-            contador++;
-        }else {
-            break;
-        }
-    }
-    String resultado = palabras.replaceAll("\\s", ".");
+     int contador = 0;
+     for(int i = 0; i < arr.length; i ++){
+         System.out.println(arr[i]);
+         if(arr[i] != "  "){
+             contador++;
+         }else {
+             break;
+         }
+     }
+     String resultado = palabras.replaceAll("\\s", ".");
     System.out.println(palabras.split("\\s+").length);
     System.out.println(resultado);
-
+    */
     //!Ejercicio 11 SUMA DE DIGITOS DE UN ENTERO
     /*
     Integer numero = 1234;
@@ -408,7 +416,10 @@ public class EjerciciosElementalesGF {
 
     //!EJERCICIO 12
     //? cantidad inicial, interes (porcentaje), tiempo (en meses)
-   // myInteres(10000, 5, 4);
+    //myInteres(10000, 5, 4);
+
+    //!EJERCICIO 13
+    //myYear(1064);
 
     } //TODOPSVM
 }//TODOFINAL
