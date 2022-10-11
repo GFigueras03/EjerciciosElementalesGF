@@ -1,6 +1,8 @@
 package com.tiernoparla.ejercicioselementalesgf;
 
-//import java.util.*;
+import java.util.Scanner;
+
+import java.util.*;
 //import java.lang.Math;
 
 
@@ -414,13 +416,46 @@ public class EjerciciosElementalesGF {
     System.out.println("la suma de los digitos de " +numero +" es igual a = " + suma);
     */
 
-    //!EJERCICIO 12
+    //!EJERCICIO 12 INTERES
     //? cantidad inicial, interes (porcentaje), tiempo (en meses)
     //myInteres(10000, 5, 4);
 
-    //!EJERCICIO 13
+    //!EJERCICIO 13 AÑO BISIESTO
     //myYear(1064);
-
+    //!EJERCICIO 14 PASSWORD
+    Scanner sc = new Scanner(System.in);
+    String contraseña;
+    
+      String numeros = "1234567890";
+      String cadena = " ";
+      cadena = numeros.toString();
+      int suma = 0;
+        
+     System.out.println("introduce una contraseña");
+     contraseña = sc.nextLine();
+    if(contraseña.length()> 9){
+        System.out.println("Contraseña con mas de 10 digitos");
+    }
+    while(contraseña.length()< 10){
+        System.out.println("la contraeña tiene que tener 10 digitos, intentelo de nuevo");
+        contraseña = sc.nextLine();
+    }
+    for(int i = 0; i< contraseña.length(); i++ ){
+        for(int j = 0; j< numeros.length(); j++){
+            if(contraseña.charAt(i) == numeros.charAt(j)){
+                suma++;
+                break;
+            }
+           
+        }
+    }
+    if(suma < 2){
+        System.out.println("la contraseña tiene que tener 2 o mas numeeros");
+        contraseña = sc.nextLine();
+    }else if(suma > 2){
+        System.out.println("contraseña correcta");
+    }
+        
     } //TODOPSVM
 }//TODOFINAL
 
