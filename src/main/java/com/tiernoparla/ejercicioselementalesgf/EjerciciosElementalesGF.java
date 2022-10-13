@@ -141,7 +141,7 @@ public class EjerciciosElementalesGF {
     }
     */
     //*===>EJERCICIO 14 CONTRASEÑA<===*
-    /*
+ /*   
     static void myPass(){
         //DECLARACIONES
         Scanner sc = new Scanner(System.in);
@@ -152,7 +152,6 @@ public class EjerciciosElementalesGF {
         int sumaNumeros = 0; //= SUMA DE NUMEROS
         int sumaCaracteres = 0; //=SUMA DE CARACTERES
         cadena = caracteresEspeciales.toString();
-        //
 
         //?DECLARACION DE LA CONTRASEÑA
         System.out.println("introduce una contraseña");
@@ -184,9 +183,8 @@ public class EjerciciosElementalesGF {
             "\n de ellos 2 minimo deben ser letras y no puede contener ningun caracter especial");
             myPass();//?VOLVEMOS A EJECUTAR LA FUNCION
         }//!PERO, si hay menos de 2 numeros, o , la contraseña tiene menos de 10 caracteres, o contiene algun caracter especial, HACEMOS QUE REPITA LA FUNCION HASTA QUE SEA CORRECTA)
-
     }
-    */
+*/
 //*===>EJERCICIO 15 MATRIZ nxn<===*
 /*
 static void myMatrix(int n){
@@ -194,8 +192,7 @@ static void myMatrix(int n){
     // System.out.println(x);
        for(int i = 0; i < n; i++){
            for(int j = 0; j < n; j++){
-               double x = Math.random();
-               x = Math.round(x);
+            double x = Math.round(Math.random());
                 array[i][j] = (int)x;
                 // System.out.print(" | " + array[i][j]+ " | ");
            }
@@ -204,7 +201,7 @@ static void myMatrix(int n){
             System.out.println(Arrays.toString(matriz));
         };
     }
-*/
+    */
     //!}
     public static void main(String[] args) {
     //!=====> EJERCICIO 1 <=====!
@@ -496,9 +493,8 @@ static void myMatrix(int n){
     //!EJERCICIO 14 PASSWORD
     //myPass();
     //!EJERCICIO 15 MATRIZ NxN METODO
-    //myMatrix(5);
-  
-   
+    //myMatrix(11);
+    //!EJERCICIO 16 AREA TRIANGULO  
   
     } //TODOPSVM
 }//TODOFINAL
