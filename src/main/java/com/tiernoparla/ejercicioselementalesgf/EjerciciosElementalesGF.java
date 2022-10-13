@@ -112,8 +112,8 @@ public class EjerciciosElementalesGF {
     */
     //*===>EJERCICIO 12 METODO INTERES)<===*
      
-    static void myInteres(double cantidadInicial, double numeroMeses, double interes){
-       
+    //static void myInteres(double cantidadInicial, double numeroMeses, double interes){
+     /*  
 
         for(int i = 0; i< 10; i++){
             double operacion = 0;
@@ -129,7 +129,7 @@ public class EjerciciosElementalesGF {
 
         }
     }
-    
+    */
     //*===>EJERCICIO 13 AÑO BISIESTO)<===*
     /*
     static void myYear(int numero){
@@ -187,6 +187,24 @@ public class EjerciciosElementalesGF {
 
     }
     */
+//*===>EJERCICIO 15 MATRIZ nxn<===*
+/*
+static void myMatrix(int n){
+  int[][] array = new int[n][n];
+    // System.out.println(x);
+       for(int i = 0; i < n; i++){
+           for(int j = 0; j < n; j++){
+               double x = Math.random();
+               x = Math.round(x);
+                array[i][j] = (int)x;
+                // System.out.print(" | " + array[i][j]+ " | ");
+           }
+         }
+         for (int[] matriz : array) {
+            System.out.println(Arrays.toString(matriz));
+        };
+    }
+*/
     //!}
     public static void main(String[] args) {
     //!=====> EJERCICIO 1 <=====!
@@ -469,7 +487,7 @@ public class EjerciciosElementalesGF {
 */
     //!EJERCICIO 12 INTERES
     //? cantidad inicial, interes (porcentaje), tiempo (en meses)
-    myInteres(100,12 , 5);
+    //myInteres(100,12 , 5);
     //EMPIEZAS CON UN INTERES A X AÑOS 
 
 
@@ -477,7 +495,11 @@ public class EjerciciosElementalesGF {
     //myYear(1064);
     //!EJERCICIO 14 PASSWORD
     //myPass();
-    
+    //!EJERCICIO 15 MATRIZ NxN METODO
+    //myMatrix(5);
+  
+   
+  
     } //TODOPSVM
 }//TODOFINAL
 
