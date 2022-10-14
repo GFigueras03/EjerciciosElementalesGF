@@ -1,11 +1,15 @@
 package com.tiernoparla.ejercicioselementalesgf;
 import java.util.*;
+
+import javax.xml.transform.SourceLocator;
+import java.util.Arrays;
 import java.lang.Math;
+import java.rmi.registry.Registry;
 
 public class EjerciciosElementalesGF {
     //!FUNCIONES{
     //*===>EJERCICIO 5 METODO CAPICUA <===*
-    /* 
+    /*
     static void myCapicua(int N){
         int aux, inverso = 0, cifra;
         aux = N;
@@ -22,7 +26,7 @@ public class EjerciciosElementalesGF {
     }
     */
     //*===>EJERCICIO 6 METODO NUMERO MENOR <=== MODO FACIL
-    /* 
+    /*
     static void myMinorNumber(int n,int n1,int n2,int n3,int n4, int n5, int n6, int n7){
         int op1 = Math.min(n,n1);
         int op2 = Math.min(n2, n3);
@@ -56,7 +60,7 @@ public class EjerciciosElementalesGF {
            suma = suma + result[i];
         }//?BUCLE2
 
-        System.out.println("\n" + "ESTA ES LA MEDIA:" + "\n" + (double)suma / tamaño); 
+        System.out.println("\n" + "ESTA ES LA MEDIA:" + "\n" + (double)suma / tamaño);
     }
     */
     //*===>EJERCICIO 8 METODO CHAR MEDIO STRING <===*
@@ -82,7 +86,7 @@ public class EjerciciosElementalesGF {
     static void myChar2(String palabra){
         char letraImpar = palabra.charAt(palabra.length()/2);
         String letras = palabra.substring((palabra.length()/2)-1,(palabra.length()/2) +1);
-           
+
         if(palabra.length()%2 != 0){
             System.out.println(letraImpar);
         }else{
@@ -111,9 +115,9 @@ public class EjerciciosElementalesGF {
     }
     */
     //*===>EJERCICIO 12 METODO INTERES)<===*
-     
+
     //static void myInteres(double cantidadInicial, double numeroMeses, double interes){
-     /*  
+     /*
 
         for(int i = 0; i< 10; i++){
             double operacion = 0;
@@ -141,7 +145,7 @@ public class EjerciciosElementalesGF {
     }
     */
     //*===>EJERCICIO 14 CONTRASEÑA<===*
- /*   
+ /*
     static void myPass(){
         //DECLARACIONES
         Scanner sc = new Scanner(System.in);
@@ -178,7 +182,7 @@ public class EjerciciosElementalesGF {
            + " y " + sumaNumeros + " de ellos son numeros");
         }//?IF (si hay 2 o mas de 2 numeros, la suma de caracteres de la contraseña es mayor o igual a 10, y No hay ningun caracter)  )
         else if(sumaNumeros < 2 || contraseña.length()< 10 || sumaCaracteres>=1){
-            System.out.println("Tu contraseña no cumple uno de los requisitos" + "\n" + 
+            System.out.println("Tu contraseña no cumple uno de los requisitos" + "\n" +
             " La contraseña debe tener minimo 10 caracteres" +
             "\n de ellos 2 minimo deben ser letras y no puede contener ningun caracter especial");
             myPass();//?VOLVEMOS A EJECUTAR LA FUNCION
@@ -187,8 +191,8 @@ public class EjerciciosElementalesGF {
 */
 //*===>EJERCICIO 15 MATRIZ nxn<===*
 /*
-static void myMatrix(int n){
-  int[][] array = new int[n][n];
+    static void myMatrix(int n){
+    int[][] array = new int[n][n];
     // System.out.println(x);
        for(int i = 0; i < n; i++){
            for(int j = 0; j < n; j++){
@@ -202,6 +206,41 @@ static void myMatrix(int n){
         };
     }
     */
+//*===>EJERCICIO 16 AREA TRIANGULO METODO HERÓN<===*
+/*
+    static void myArea(int lado1,int lado2,int lado3){
+    int perimetro = lado1 + lado2 + lado3;
+    int s = perimetro / 2; // s = semiperimetro
+    double area = (s*(s-lado1)*(s-lado2)*(s-lado3));
+    area = Math.sqrt(area);
+    System.out.println(area + "m2");
+    }
+*/
+//* */
+static void miNumeroPrimo(){
+int numero  = 17;
+    if (numero == 0 || numero == 1 || numero == 4){
+    }
+    for(int i = 2; i<numero ; i++){
+        if(numero % i != 0){
+        }
+    }
+}
+//*===>EJERCICIO 20 NUMERO DEL MEDIOs<===*
+/* 
+static void myMidNumber(){
+    Scanner sc = new Scanner(System.in);
+    int tamaño = 3;
+    int[] array = new int[tamaño];
+    System.out.println("INTRODUCE 3 NUMEROS");
+    for(int i = 0; i< tamaño; i++){
+        System.out.println("numero "+ i);
+        array[i] = sc.nextInt();
+    }
+    System.out.println("los numeros escogidos son " + array[0] + " " + array[1] + " " + array[2]);
+    System.out.println("el numero del medio es "+ array[1]);
+}
+*/
     //!}
     public static void main(String[] args) {
     //!=====> EJERCICIO 1 <=====!
@@ -243,11 +282,11 @@ static void myMatrix(int n){
     //!=====> EJERCICIO3 <=====!
     //?=====>FIBONNACI <=====?
     /*
-       
+
     Integer x1 = 1;
     Integer x2 = 1;
     Integer x3 = 0;5
-          
+
     for(Integer i = 3; i<= 10; i++){
         x3 = x2 + x1;
         x1 = x2;
@@ -256,8 +295,8 @@ static void myMatrix(int n){
     }
     */
     //?=====> FIBONACCI CON ARRAYS <=====?
-    //?=====> FORMA 1 <=====?  
-    /* 
+    //?=====> FORMA 1 <=====?
+    /*
     int N = 20;
     int fibbo[] = new int[3];
     fibbo[0] = 1;
@@ -270,7 +309,7 @@ static void myMatrix(int n){
         result[i] = fibbo[2];
         System.out.println(result[i]);
     }
-    */ 
+    */
     //?=====> FORMA 2 <=====?
     /*
     int N = 20;
@@ -284,9 +323,9 @@ static void myMatrix(int n){
     for (int i = 0; i < fibbo.length; i++) {
         System.out.println(fibbo[i]);
     } // FOR2
-    */  
+    */
     //!Ejercicio 4 CAPICUA
-    
+
     //PASO 1 MODULO 10
     //PASO 2 DIVIDIR / 10 Y GUARDAR VALORES
     //*=====> TEORIA <=====*
@@ -301,11 +340,11 @@ static void myMatrix(int n){
     //sout(arr[3]*10^0)  // 3
 
     //sout(arr[i]*10^(tamaño-1)-i)
-    
-    
+
+
     // ?=====>  <=====?
      /*
-    int N = 5005; 
+    int N = 5005;
     String tamaño1 = Integer.toString(N);
     int tamaño = tamaño1.length();
     int tmp = N;
@@ -328,9 +367,9 @@ static void myMatrix(int n){
     }
     */
      //!=====>PAS0 3 RECUPERAR NUMERO <=====!
-     
+
     //?=====>  <=====?
-    /* 
+    /*
     double x = 0;
     for(int i = 0; i < tamaño; i++){
         x = x + cifras[i]*Math.pow(10,tamaño - (i+1));
@@ -340,7 +379,7 @@ static void myMatrix(int n){
     if(x == N){
          System.out.println("EL NUMERO ES CAPICUA");
     }//IF
-        
+
     else{
          System.out.println("EL NUMERO NO ES CAPICUA");
     }//ELSE
@@ -434,7 +473,7 @@ static void myMatrix(int n){
         }
     }
     System.out.println("la palabra " + palabra + " posee " + suma + " vocales");
-    
+
     */
     //!PROFE
     /*
@@ -443,7 +482,7 @@ static void myMatrix(int n){
     for(char c : palabra.toCharArray()){
        if(c == 'a' ||  c == 'e' || c == 'i' || c == 'o' || c == 'u') {
            suma++;
-       }  
+       }
     }
     System.out.println(suma);
 
@@ -455,7 +494,7 @@ static void myMatrix(int n){
     palabras = palabras.trim();
     System.out.println(palabras.split("\\s+").length);
     */
-    /*  
+    /*
     String arr[] = palabras.split(" ");
       int contador = 0;
       for(int i = 0; i < arr.length; i ++){
@@ -480,12 +519,12 @@ static void myMatrix(int n){
         suma = suma + array[i];
     }
     System.out.println("la suma de los digitos de " +numero +" es igual a = " + suma);
-    
+
 */
     //!EJERCICIO 12 INTERES
     //? cantidad inicial, interes (porcentaje), tiempo (en meses)
     //myInteres(100,12 , 5);
-    //EMPIEZAS CON UN INTERES A X AÑOS 
+    //EMPIEZAS CON UN INTERES A X AÑOS
 
 
     //!EJERCICIO 13 AÑO BISIESTO
@@ -494,8 +533,36 @@ static void myMatrix(int n){
     //myPass();
     //!EJERCICIO 15 MATRIZ NxN METODO
     //myMatrix(11);
-    //!EJERCICIO 16 AREA TRIANGULO  
-  
+    //!EJERCICIO 16 AREA TRIANGULO
+    //? pasar (lado1,lado2,lado3)
+    // myArea(14,22,12);
+    //!EJERCICIO 17 NºPRIMOS GEMELOS
+    miNumeroPrimo();
+    //!EJERCICIO 18 NO ENTIENDO LA SINTAXIS
+    //!EJERCICIO 19 NºCONSECUTIVOS
+    /* 
+    Scanner sc = new Scanner(System.in);
+    int n = 17;
+    int array[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18};
+    int recuento = 0;
+    for(int i = 0; i < n; i++){
+        int presenteMas1 = array[i];
+        // System.out.print(presenteMas1 + " ");
+        int futuro = array[i +1];
+        //  System.out.print("(" + futuro + ")");
+        if(futuro - presenteMas1 == 1){
+           recuento++;
+        } 
+    }
+    if(recuento == n){
+        System.out.println("los numeros son consecutivos");
+      }else{
+        System.out.println("los numeros no son consecutivos");
+      }
+      */
+    ////!EJERCICIO 20 NUMERO DEL MEDIO
+     // myMidNumber();
+
     } //TODOPSVM
 }//TODOFINAL
 
