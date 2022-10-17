@@ -1,10 +1,7 @@
 package com.tiernoparla.ejercicioselementalesgf;
 import java.util.*;
+//import java.lang.Math;
 
-import javax.xml.transform.SourceLocator;
-import java.util.Arrays;
-import java.lang.Math;
-import java.rmi.registry.Registry;
 
 public class EjerciciosElementalesGF {
     //!FUNCIONES{
@@ -114,6 +111,7 @@ public class EjerciciosElementalesGF {
         System.out.println("la palabra " + palabra + " tiene " + palabra.length() + " caracteres y " + recuento + " vocales");
     }
     */
+ 
     //*===>EJERCICIO 12 METODO INTERES)<===*
 
     //static void myInteres(double cantidadInicial, double numeroMeses, double interes){
@@ -216,16 +214,9 @@ public class EjerciciosElementalesGF {
     System.out.println(area + "m2");
     }
 */
-//* */
-static void miNumeroPrimo(){
-int numero  = 17;
-    if (numero == 0 || numero == 1 || numero == 4){
-    }
-    for(int i = 2; i<numero ; i++){
-        if(numero % i != 0){
-        }
-    }
-}
+//*===>EJERCICIO 17 NUMEROS PRIMOS GEMELOS<===* 
+
+
 //*===>EJERCICIO 20 NUMERO DEL MEDIOs<===*
 /* 
 static void myMidNumber(){
@@ -241,6 +232,54 @@ static void myMidNumber(){
     System.out.println("el numero del medio es "+ array[1]);
 }
 */
+//*===>EJERCICIO 22 DIGITOS PARES<===*
+/* 
+    static void myNumeroPar(int numero){
+    String cadena = numero + ""; 
+    int tamaño = cadena.length();
+    int count = 0;
+    for(int i = 0; i<tamaño; i++){
+        int operacion = cadena.charAt(i) % 2;
+        if(operacion == 0){
+            count++;
+        }
+    }
+        if(count == tamaño){
+            System.out.println("Todos los digitos de " + numero + " son pares");
+        }else System.out.println("Todos los digitos de " + numero + " no son pares ");
+    }
+*/
+//*===>EJERCICIO 23 CONTAR VOCALES<===*
+/* 
+    static void contarVocales(String palabra){
+        String vocales = "aeiou";
+        int suma = 0;
+        for(int i = 0; i< palabra.length(); i++ ){
+            for(int j = 0; j< vocales.length(); j++){
+                if(palabra.charAt(i) == vocales.charAt(j)){
+                    suma++;
+                    break;
+                }
+            }
+    }
+        if(suma == palabra.length()){
+            System.out.println("Todos los caracteres de la palabra "+ palabra +" son vocales \n" + "vocales: " + suma + "/" + palabra.length() );
+        }
+        else{
+            System.out.println("no todos los caracteres de la palabra "+ palabra + " son vocales\n" + "vocales: " +  suma + "/" + palabra.length());
+        } 
+    
+    }   
+*/
+//*===>EJERCICIO 24 DAR VUELTA A STRING<===*
+/* 
+    static void myPalabra(String palabra){
+        for (int i = palabra.length() - 1; i >= 0; i--) {
+            System.out.print( "| " + palabra.charAt(i) + " |" );
+        }
+        System.out.println("\n");
+    }
+    */
     //!}
     public static void main(String[] args) {
     //!=====> EJERCICIO 1 <=====!
@@ -537,32 +576,59 @@ static void myMidNumber(){
     //? pasar (lado1,lado2,lado3)
     // myArea(14,22,12);
     //!EJERCICIO 17 NºPRIMOS GEMELOS
-    miNumeroPrimo();
+    /* 
+    boolean primo = true;
+    int num ;
+    for(int i = 0; i< 100; i++){
+        num = i;
+        for(int j = 2; j< num; j++){
+            if(num % j == 0){
+                primo = false;
+                // System.out.println(num);
+                break;
+            }
+            else if(num % j != 0 && j / 2 != 0 || primo == true){
+                System.out.println(num);
+                break;
+            }
+        }
+    }
+    */
     //!EJERCICIO 18 NO ENTIENDO LA SINTAXIS
     //!EJERCICIO 19 NºCONSECUTIVOS
     /* 
     Scanner sc = new Scanner(System.in);
-    int n = 17;
-    int array[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18};
-    int recuento = 0;
-    for(int i = 0; i < n; i++){
-        int presenteMas1 = array[i];
-        // System.out.print(presenteMas1 + " ");
-        int futuro = array[i +1];
-        //  System.out.print("(" + futuro + ")");
-        if(futuro - presenteMas1 == 1){
-           recuento++;
-        } 
+    int n;
+    boolean consecutivo = true;
+    System.out.println("cuantos numeros quieres introducir");
+    n = sc.nextInt();
+    int array[] = new int[n];
+    
+    for(int i = 0; i<n ; i++){
+        System.out.println("introduce el numero " + i);
+        array[i] = sc.nextInt();
     }
-    if(recuento == n){
-        System.out.println("los numeros son consecutivos");
-      }else{
-        System.out.println("los numeros no son consecutivos");
-      }
-      */
+     for(int i = 0; i < n; i++){
+        if(i != n-1){
+            if(array[i + 1] - array[i] != 1){
+                consecutivo = false;
+            }
+        }
+     }
+     if(!consecutivo){
+        System.out.println("La cadena no es consecutiva");
+     } else System.out.println("La cadena es consecutiva");
+     
+     */
     ////!EJERCICIO 20 NUMERO DEL MEDIO
      // myMidNumber();
-
+    ////!ERJECICIO 22 DIGITOS PARES
+    //myNumeroPar(202);
+    ////!ERJECICIO 23 DIGITOS PARES
+    //?FALTA VERSION REGEX
+    //contarVocales("pepe");
+    ////!ERJECICIO 24 DAR VUELTA A UN STRING
+    //myPalabra("palabra");
     } //TODOPSVM
 }//TODOFINAL
 
