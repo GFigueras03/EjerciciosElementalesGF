@@ -1,6 +1,6 @@
 package com.tiernoparla.ejercicioselementalesgf;
 import java.util.*;
-//import java.lang.Math;
+import java.lang.Math;
 
 import javax.sound.sampled.SourceDataLine;
 import javax.swing.text.PasswordView;
@@ -150,13 +150,15 @@ public class EjerciciosElementalesGF {
     static void myPass(){
         //DECLARACIONES
         Scanner sc = new Scanner(System.in);
+
         String contraseña;
         String numeros = "1234567890";
         String caracteresEspeciales = "!·$%&/()=ª!?¿¡'`^+*çÇ´¨-_.:,;<>";
         String cadena = " ";
+        cadena = caracteresEspeciales.toString();
         int sumaNumeros = 0; //= SUMA DE NUMEROS
         int sumaCaracteres = 0; //=SUMA DE CARACTERES
-        cadena = caracteresEspeciales.toString();
+    
 
         //?DECLARACION DE LA CONTRASEÑA
         System.out.println("introduce una contraseña");
@@ -191,7 +193,7 @@ public class EjerciciosElementalesGF {
     }
 */
 //*===>EJERCICIO 15 MATRIZ nxn<===*
-/*
+    /* 
     static void myMatrix(int n){
     int[][] array = new int[n][n];
     // System.out.println(x);
@@ -205,7 +207,7 @@ public class EjerciciosElementalesGF {
           // System.out.println("");
          }
           for (int[] matriz : array) {
-             System.out.println(Arrays.toString(matriz));
+            System.out.println(Arrays.toString(matriz));
          };
     }
 */
@@ -238,9 +240,9 @@ static void myMidNumber(){
 }
 */
 //*===>EJERCICIO 22 DIGITOS PARES<===*
-/* 
-    static void myNumeroPar(int numero){
-    String cadena = numero + ""; 
+    /* 
+    static void myNumeroPar(Integer numero){
+    String cadena = numero.toString(); 
     int tamaño = cadena.length();
     int count = 0;
     for(int i = 0; i<tamaño; i++){
@@ -255,7 +257,7 @@ static void myMidNumber(){
     }
 */
 //*===>EJERCICIO 23 CONTAR VOCALES<===*
-/* 
+ /* 
     static void contarVocales(String palabra){
         String vocales = "aeiou";
         int suma = 0;
@@ -277,7 +279,7 @@ static void myMidNumber(){
     }   
 */
 //*===>EJERCICIO 24 DAR VUELTA A STRING<===*
-/* 
+    /* 
     static void myPalabra(String palabra){
         for (int i = palabra.length() - 1; i >= 0; i--) {
             System.out.print( "| " + palabra.charAt(i) + " |" );
@@ -592,7 +594,18 @@ static void myMidNumber(){
     System.out.println(pass);
     */
     //!EJERCICIO 15 MATRIZ NxN METODO
-    //myMatrix(4);
+   // myMatrix(8);
+    /*  
+    Random rnd = new Random();
+    for(int i = 0; i< 10; i++){
+       Boolean j = rnd.nextBoolean();
+       if(j){
+           System.out.println(rnd);
+       }else{
+           System.out.println(rnd);
+       }
+    }
+    */
     //!EJERCICIO 16 AREA TRIANGULO
     //? pasar (lado1,lado2,lado3)
     // myArea(14,22,12);
@@ -605,16 +618,13 @@ static void myMidNumber(){
         for(int j = 2; j< num; j++){
             if(num % j == 0){
                 primo = false;
-                // System.out.println(num);
+                 System.out.println(num);
                 break;
-            }
-            else if(num % j != 0 && j / 2 != 0 || primo == true){
-                System.out.println(num);
-                break;
-            }
+            }else System.out.println(num);
+          
         }
     }
-    */
+*/
     //!EJERCICIO 18 NO ENTIENDO LA SINTAXIS
     //!EJERCICIO 19 NºCONSECUTIVOS
     /* 
@@ -644,24 +654,14 @@ static void myMidNumber(){
     ////!EJERCICIO 20 NUMERO DEL MEDIO
      // myMidNumber();
     ////!ERJECICIO 22 DIGITOS PARES
-    //myNumeroPar(202);
+    //myNumeroPar(435);
     ////!ERJECICIO 23 DIGITOS PARES
     //?FALTA VERSION REGEX
-    //contarVocales("pepe");
+    //contarVocales("aaaeeeiuuoo");
     ////!ERJECICIO 24 DAR VUELTA A UN STRING
     //myPalabra("palabra");
     ///////////
-     Random rnd = new Random();
-     for(int i = 0; i< 10; i++){
-        Boolean j = rnd.nextBoolean();
-        if(j){
-            System.out.println(1);
-        }else{
-            System.out.println(0);
-        }
-     }
-
-    
+   
     } //TODOPSVM
 }//TODOFINAL
 
