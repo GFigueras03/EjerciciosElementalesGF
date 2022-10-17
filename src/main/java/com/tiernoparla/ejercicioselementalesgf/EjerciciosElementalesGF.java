@@ -2,6 +2,9 @@ package com.tiernoparla.ejercicioselementalesgf;
 import java.util.*;
 //import java.lang.Math;
 
+import javax.sound.sampled.SourceDataLine;
+import javax.swing.text.PasswordView;
+
 
 public class EjerciciosElementalesGF {
     //!FUNCIONES{
@@ -197,13 +200,15 @@ public class EjerciciosElementalesGF {
             double x = Math.round(Math.random());
                 array[i][j] = (int)x;
                 // System.out.print(" | " + array[i][j]+ " | ");
+               // System.out.print(array[i][j]);
            }
+          // System.out.println("");
          }
-         for (int[] matriz : array) {
-            System.out.println(Arrays.toString(matriz));
-        };
+          for (int[] matriz : array) {
+             System.out.println(Arrays.toString(matriz));
+         };
     }
-    */
+*/
 //*===>EJERCICIO 16 AREA TRIANGULO METODO HERÓN<===*
 /*
     static void myArea(int lado1,int lado2,int lado3){
@@ -570,8 +575,24 @@ static void myMidNumber(){
     //myYear(1064);
     //!EJERCICIO 14 PASSWORD
     //myPass();
+    /*//?MODO RAPIDO
+    Scanner sc = new Scanner(System.in);
+    String password = sc.nextLine();
+    boolean pass = true;
+    int counter = 0;
+    for(char c : password.toCharArray()){
+        if(Character.isDigit(c)){
+            counter++;
+        }
+    }
+    if(password.length()< 10 || !password.matches("[a-zA-Z0-9]*") || counter < 2 ){
+        pass = false;
+    }
+    else pass = true;
+    System.out.println(pass);
+    */
     //!EJERCICIO 15 MATRIZ NxN METODO
-    //myMatrix(11);
+    //myMatrix(4);
     //!EJERCICIO 16 AREA TRIANGULO
     //? pasar (lado1,lado2,lado3)
     // myArea(14,22,12);
@@ -629,6 +650,18 @@ static void myMidNumber(){
     //contarVocales("pepe");
     ////!ERJECICIO 24 DAR VUELTA A UN STRING
     //myPalabra("palabra");
+    ///////////
+     Random rnd = new Random();
+     for(int i = 0; i< 10; i++){
+        Boolean j = rnd.nextBoolean();
+        if(j){
+            System.out.println(1);
+        }else{
+            System.out.println(0);
+        }
+     }
+
+    
     } //TODOPSVM
 }//TODOFINAL
 
