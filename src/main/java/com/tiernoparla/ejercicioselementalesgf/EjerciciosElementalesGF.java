@@ -36,7 +36,7 @@ public class EjerciciosElementalesGF {
     }
     */
     //*===>EJERCICIO 7 METODO MEDIA <===*
-     /*
+    /*
     static void myMedia(){
         int tamaño;
         Scanner sc = new Scanner(System.in);
@@ -78,7 +78,7 @@ public class EjerciciosElementalesGF {
     }
     */
     //*===>EJ8 MODO2<===*
-     /*
+    /*
     static void myChar2(String palabra){
         char letraImpar = palabra.charAt(palabra.length()/2);
         String letras = palabra.substring((palabra.length()/2)-1,(palabra.length()/2) +1);
@@ -91,7 +91,7 @@ public class EjerciciosElementalesGF {
         }
     */
     //*===>EJERCICIO 9 CONTAR VOCALES(VERSION METODO / MODO FACIL)<===*
-     /*
+    /*
     static void myVocals(String palabra){
         char a = 'a';
         char e = 'e';
@@ -110,12 +110,9 @@ public class EjerciciosElementalesGF {
         System.out.println("la palabra " + palabra + " tiene " + palabra.length() + " caracteres y " + recuento + " vocales");
     }
     */
- 
     //*===>EJERCICIO 12 METODO INTERES)<===*
-
     //static void myInteres(double cantidadInicial, double numeroMeses, double interes){
-     /*
-
+    /*
         for(int i = 0; i< 10; i++){
             double operacion = 0;
             operacion = (cantidadInicial * interes) / 100;
@@ -142,7 +139,7 @@ public class EjerciciosElementalesGF {
     }
     */
     //*===>EJERCICIO 14 CONTRASEÑA<===*
- /*
+    /*
     static void myPass(){
         //DECLARACIONES
         Scanner sc = new Scanner(System.in);
@@ -187,8 +184,8 @@ public class EjerciciosElementalesGF {
             myPass();//?VOLVEMOS A EJECUTAR LA FUNCION
         }//!PERO, si hay menos de 2 numeros, o , la contraseña tiene menos de 10 caracteres, o contiene algun caracter especial, HACEMOS QUE REPITA LA FUNCION HASTA QUE SEA CORRECTA)
     }
-*/
-//*===>EJERCICIO 15 MATRIZ nxn<===*
+    */
+    //*===>EJERCICIO 15 MATRIZ nxn<===*
     /* 
     static void myMatrix(int n){
     int[][] array = new int[n][n];
@@ -206,9 +203,9 @@ public class EjerciciosElementalesGF {
             System.out.println(Arrays.toString(matriz));
          };
     }
-*/
-//*===>EJERCICIO 16 AREA TRIANGULO METODO HERÓN<===*
-/*
+    */
+    //*===>EJERCICIO 16 AREA TRIANGULO METODO HERÓN<===*
+    /*
     static void myArea(int lado1,int lado2,int lado3){
     int perimetro = lado1 + lado2 + lado3;
     int s = perimetro / 2; // s = semiperimetro
@@ -216,26 +213,67 @@ public class EjerciciosElementalesGF {
     area = Math.sqrt(area);
     System.out.println(area + "m2");
     }
-*/
-//*===>EJERCICIO 17 NUMEROS PRIMOS GEMELOS<===* 
-
-
-//*===>EJERCICIO 20 NUMERO DEL MEDIOs<===*
-/* 
-static void myMidNumber(){
-    Scanner sc = new Scanner(System.in);
-    int tamaño = 3;
-    int[] array = new int[tamaño];
-    System.out.println("INTRODUCE 3 NUMEROS");
-    for(int i = 0; i< tamaño; i++){
-        System.out.println("numero "+ i);
-        array[i] = sc.nextInt();
+    */
+    //*===>EJERCICIO 17 NUMEROS PRIMOS GEMELOS<===* 
+    /* //!METODO DECIR SI UN NUMERO ES PRIMO
+    static void esPrimo(int numero){
+        boolean isPrime = true;
+        for(int i = 2; i < numero; i++){
+            if(numero % i == 0){
+                isPrime = false;
+                break;          
+                }
+            }
+        if(isPrime){
+            System.out.println("el numero es primo");
+        }else System.out.println("el numero no es primo");
     }
-    System.out.println("los numeros escogidos son " + array[0] + " " + array[1] + " " + array[2]);
-    System.out.println("el numero del medio es "+ array[1]);
-}
-*/
-//*===>EJERCICIO 22 DIGITOS PARES<===*
+    */
+    /*//!METODO CALCULAR PRIMOS GEMELOS HASTA N
+    static void primosGemelos(int tamaño){
+        ArrayList<Integer> primos = new ArrayList<Integer>();
+        for(int i=1;i<=tamaño;i++){
+            int count=0;
+            for(int j=1;j<=i;j++){
+                if(i%j==0){
+                    count++;
+                }
+            }
+            if(count==2){
+            //  System.out.println(i);
+                primos.add(i);        
+            }
+        }
+        int[] array = new int[primos.size()];
+        for(int i =0; i< primos.size(); i++){
+            array[i] = primos.get(i);
+            //  System.out.println(array[i]);
+        }
+        System.out.println("Son numeros primos gemelos:");
+        for(int i = 1; i< primos.size() ; i++){
+            if(array[i] - primos.get(i - 1) == 2){
+                System.out.println(primos.get(i -1) + " " +  array[i]);
+        
+            }
+        }
+    }
+        */
+    //*===>EJERCICIO 20 NUMERO DEL MEDIOs<===*
+    /* 
+    static void myMidNumber(){
+        Scanner sc = new Scanner(System.in);
+        int tamaño = 3;
+        int[] array = new int[tamaño];
+        System.out.println("INTRODUCE 3 NUMEROS");
+        for(int i = 0; i< tamaño; i++){
+            System.out.println("numero "+ i);
+            array[i] = sc.nextInt();
+        }
+        System.out.println("los numeros escogidos son " + array[0] + " " + array[1] + " " + array[2]);
+        System.out.println("el numero del medio es "+ array[1]);
+    }
+    */
+    //*===>EJERCICIO 22 DIGITOS PARES<===*
     /* 
     static void myNumeroPar(Integer numero){
     String cadena = numero.toString(); 
@@ -251,37 +289,37 @@ static void myMidNumber(){
             System.out.println("Todos los digitos de " + numero + " son pares");
         }else System.out.println("Todos los digitos de " + numero + " no son pares ");
     }
-*/
-//*===>EJERCICIO 23 CONTAR VOCALES<===*
- /* 
-    static void contarVocales(String palabra){
-        String vocales = "aeiou";
-        int suma = 0;
-        for(int i = 0; i< palabra.length(); i++ ){
-            for(int j = 0; j< vocales.length(); j++){
-                if(palabra.charAt(i) == vocales.charAt(j)){
-                    suma++;
-                    break;
+    */
+    //*===>EJERCICIO 23 CONTAR VOCALES<===*
+     /* 
+        static void contarVocales(String palabra){
+            String vocales = "aeiou";
+            int suma = 0;
+            for(int i = 0; i< palabra.length(); i++ ){
+                for(int j = 0; j< vocales.length(); j++){
+                    if(palabra.charAt(i) == vocales.charAt(j)){
+                        suma++;
+                        break;
+                    }
                 }
-            }
-    }
-        if(suma == palabra.length()){
-            System.out.println("Todos los caracteres de la palabra "+ palabra +" son vocales \n" + "vocales: " + suma + "/" + palabra.length() );
         }
-        else{
-            System.out.println("no todos los caracteres de la palabra "+ palabra + " son vocales\n" + "vocales: " +  suma + "/" + palabra.length());
-        } 
-    
-    }   
-*/
-//*===>EJERCICIO 24 DAR VUELTA A STRING<===*
+            if(suma == palabra.length()){
+                System.out.println("Todos los caracteres de la palabra "+ palabra +" son vocales \n" + "vocales: " + suma + "/" + palabra.length() );
+            }
+            else{
+                System.out.println("no todos los caracteres de la palabra "+ palabra + " son vocales\n" + "vocales: " +  suma + "/" + palabra.length());
+            } 
+        
+        }   
+    */
+    //*===>EJERCICIO 24 DAR VUELTA A STRING<===*
     /* 
     static void myPalabra(String palabra){
         for (int i = palabra.length() - 1; i >= 0; i--) {
-            System.out.print( "| " + palabra.charAt(i) + " |" );
+                System.out.print( "| " + palabra.charAt(i) + " |" );
         }
         System.out.println("\n");
-    }
+        }
     */
     //!}
     public static void main(String[] args) {
@@ -562,7 +600,7 @@ static void myMidNumber(){
     }
     System.out.println("la suma de los digitos de " +numero +" es igual a = " + suma);
 
-*/
+    */
     //!EJERCICIO 12 INTERES
     //? cantidad inicial, interes (porcentaje), tiempo (en meses)
     //myInteres(100,12 , 5);
@@ -606,33 +644,8 @@ static void myMidNumber(){
     //? pasar (lado1,lado2,lado3)
     // myArea(14,22,12);
     //!EJERCICIO 17 NºPRIMOS GEMELOS
-    /*
-    boolean primo = true;
-    int num ;
-    for(int i = 2; i< 100; i++){
-        num = i;
-        for(int j = 2; j< num; j++){
-            if(j % i == 0){
-                primo = false;
-                // System.out.println(num);
-                break;          
-            }
-        }
-    }
-    
-*/  
-for(int i=1;i<=100;i++){
-    int count=0;
-    for(int j=1;j<=i;j++){
-        if(i%j==0){
-            count++;
-        }
-    }
-    if(count==2){
-        System.out.println(i);
-    }
-}
-    
+    //esPrimo(17);    
+    //primosGemelos(100);
     //!EJERCICIO 18 NO ENTIENDO LA SINTAXIS
     //!EJERCICIO 19 NºCONSECUTIVOS
     /* 
@@ -670,6 +683,22 @@ for(int i=1;i<=100;i++){
     //myPalabra("palabra");
     ///////////
    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     } //TODOPSVM
 }//TODOFINAL
 
