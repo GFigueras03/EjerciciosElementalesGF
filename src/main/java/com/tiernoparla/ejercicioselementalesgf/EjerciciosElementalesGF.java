@@ -2,10 +2,6 @@ package com.tiernoparla.ejercicioselementalesgf;
 import java.util.*;
 import java.lang.Math;
 
-import javax.sound.sampled.SourceDataLine;
-import javax.swing.text.PasswordView;
-
-
 public class EjerciciosElementalesGF {
     //!FUNCIONES{
     //*===>EJERCICIO 5 METODO CAPICUA <===*
@@ -610,21 +606,33 @@ static void myMidNumber(){
     //? pasar (lado1,lado2,lado3)
     // myArea(14,22,12);
     //!EJERCICIO 17 NºPRIMOS GEMELOS
-    /* 
+    /*
     boolean primo = true;
     int num ;
-    for(int i = 0; i< 100; i++){
+    for(int i = 2; i< 100; i++){
         num = i;
         for(int j = 2; j< num; j++){
-            if(num % j == 0){
+            if(j % i == 0){
                 primo = false;
-                 System.out.println(num);
-                break;
-            }else System.out.println(num);
-          
+                // System.out.println(num);
+                break;          
+            }
         }
     }
-*/
+    
+*/  
+for(int i=1;i<=100;i++){
+    int count=0;
+    for(int j=1;j<=i;j++){
+        if(i%j==0){
+            count++;
+        }
+    }
+    if(count==2){
+        System.out.println(i);
+    }
+}
+    
     //!EJERCICIO 18 NO ENTIENDO LA SINTAXIS
     //!EJERCICIO 19 NºCONSECUTIVOS
     /* 
