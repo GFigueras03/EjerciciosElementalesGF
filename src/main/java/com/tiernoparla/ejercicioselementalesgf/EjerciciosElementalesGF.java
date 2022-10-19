@@ -1,6 +1,6 @@
 package com.tiernoparla.ejercicioselementalesgf;
 import java.util.*;
-import java.lang.Math;
+// import java.lang.Math;
 
 public class EjerciciosElementalesGF {
     //!FUNCIONES{
@@ -229,7 +229,8 @@ public class EjerciciosElementalesGF {
         }else System.out.println("el numero no es primo");
     }
     */
-    /*//!METODO CALCULAR PRIMOS GEMELOS HASTA N
+    //!METODO CALCULAR PRIMOS GEMELOS HASTA N
+    /*
     static void primosGemelos(int tamaño){
         ArrayList<Integer> primos = new ArrayList<Integer>();
         for(int i=1;i<=tamaño;i++){
@@ -242,22 +243,35 @@ public class EjerciciosElementalesGF {
             if(count==2){
             //  System.out.println(i);
                 primos.add(i);        
-            }
-        }
+            }//?IF
+        }//?FOR
         int[] array = new int[primos.size()];
         for(int i =0; i< primos.size(); i++){
             array[i] = primos.get(i);
-            //  System.out.println(array[i]);
-        }
+        }//?FOR
         System.out.println("Son numeros primos gemelos:");
         for(int i = 1; i< primos.size() ; i++){
-            if(array[i] - primos.get(i - 1) == 2){
-                System.out.println(primos.get(i -1) + " " +  array[i]);
+            if(array[i] - array[i -1] == 2){
+                System.out.println(array[i-1] + " " +  array[i]);
         
-            }
-        }
+            }//?IF
+        }//?FOR
     }
-        */
+    */
+    //*===>EJERCICIO 18 CALCULAR TODOS LOS DIGITOS X<===*
+    /*
+    static void digitos(Integer n, char x){
+        int count = 0;
+        for(int i = 0; i< n.toString().length(); i++){
+            if(n.toString().charAt(i) == x){
+                count++;
+            }
+            
+        }
+        System.out.println("el numero " + n + " contiene el digito " + x + " " + count + " veces");
+        
+    }
+    */
     //*===>EJERCICIO 20 NUMERO DEL MEDIOs<===*
     /* 
     static void myMidNumber(){
@@ -313,7 +327,7 @@ public class EjerciciosElementalesGF {
         }   
     */
     //*===>EJERCICIO 24 DAR VUELTA A STRING<===*
-    /* 
+    /*
     static void myPalabra(String palabra){
         for (int i = palabra.length() - 1; i >= 0; i--) {
                 System.out.print( "| " + palabra.charAt(i) + " |" );
@@ -645,8 +659,9 @@ public class EjerciciosElementalesGF {
     // myArea(14,22,12);
     //!EJERCICIO 17 NºPRIMOS GEMELOS
     //esPrimo(17);    
-    //primosGemelos(100);
-    //!EJERCICIO 18 NO ENTIENDO LA SINTAXIS
+    //primosGemelos(150);
+    //!EJERCICIO 18 DIGITOS DE UN NUMERO
+    //digitos(44444, '1');
     //!EJERCICIO 19 NºCONSECUTIVOS
     /* 
     Scanner sc = new Scanner(System.in);
@@ -674,16 +689,38 @@ public class EjerciciosElementalesGF {
      */
     ////!EJERCICIO 20 NUMERO DEL MEDIO
      // myMidNumber();
+    ///!EJERCICIO 21 METODO NUMERO COMO FACTOR
     ////!ERJECICIO 22 DIGITOS PARES
     //myNumeroPar(435);
     ////!ERJECICIO 23 DIGITOS PARES
     //?FALTA VERSION REGEX
     //contarVocales("aaaeeeiuuoo");
     ////!ERJECICIO 24 DAR VUELTA A UN STRING
-    //myPalabra("palabra");
+    //myPalabra("HOLAMUNDO1234");
     ///////////
+   ////!ERJECICIO 27 TABLA DE MULTIPLICAR
+    // int matriz[][][];
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Tamaño del array?");
+    int tamaño = sc.nextInt();
+    int array[] = new int[tamaño];
+    int matrix[][] = new int[tamaño][11];
+    
+     for(int i = 0; i < tamaño; i++){
+        System.out.println("Introduce el numero " + i);
+        array[i] = sc.nextInt();
+        }
+    for (int i = 0; i< tamaño; i++){
+        for(int j = 1; j < 11; j++){
+            matrix[i][j] = array[i] * j;
+        }
+         System.out.println("las tablas de multiplicar de 1 a 10 de los numeros " + array[i] + " son");
+    }
    
-
+        for (int[] matriz : matrix) {
+            System.out.println(Arrays.toString(matriz));
+         };
+    
 
 
 
