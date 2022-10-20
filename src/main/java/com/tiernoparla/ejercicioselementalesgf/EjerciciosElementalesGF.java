@@ -151,7 +151,7 @@ public class EjerciciosElementalesGF {
         cadena = caracteresEspeciales.toString();
         int sumaNumeros = 0; //= SUMA DE NUMEROS
         int sumaCaracteres = 0; //=SUMA DE CARACTERES
-    
+
 
         //?DECLARACION DE LA CONTRASEÑA
         System.out.println("introduce una contraseña");
@@ -186,7 +186,7 @@ public class EjerciciosElementalesGF {
     }
     */
     //*===>EJERCICIO 15 MATRIZ nxn<===*
-    /* 
+    /*
     static void myMatrix(int n){
     int[][] array = new int[n][n];
     // System.out.println(x);
@@ -214,14 +214,14 @@ public class EjerciciosElementalesGF {
     System.out.println(area + "m2");
     }
     */
-    //*===>EJERCICIO 17 NUMEROS PRIMOS GEMELOS<===* 
+    //*===>EJERCICIO 17 NUMEROS PRIMOS GEMELOS<===*
     /* //!METODO DECIR SI UN NUMERO ES PRIMO
     static void esPrimo(int numero){
         boolean isPrime = true;
         for(int i = 2; i < numero; i++){
             if(numero % i == 0){
                 isPrime = false;
-                break;          
+                break;
                 }
             }
         if(isPrime){
@@ -242,7 +242,7 @@ public class EjerciciosElementalesGF {
             }
             if(count==2){
             //  System.out.println(i);
-                primos.add(i);        
+                primos.add(i);
             }//?IF
         }//?FOR
         int[] array = new int[primos.size()];
@@ -253,27 +253,27 @@ public class EjerciciosElementalesGF {
         for(int i = 1; i< primos.size() ; i++){
             if(array[i] - array[i -1] == 2){
                 System.out.println(array[i-1] + " " +  array[i]);
-        
+
             }//?IF
         }//?FOR
     }
     */
     //*===>EJERCICIO 18 CALCULAR TODOS LOS DIGITOS X<===*
-    /*
+    
     static void digitos(Integer n, char x){
         int count = 0;
         for(int i = 0; i< n.toString().length(); i++){
             if(n.toString().charAt(i) == x){
                 count++;
             }
-            
+
         }
         System.out.println("el numero " + n + " contiene el digito " + x + " " + count + " veces");
-        
+
     }
-    */
+    
     //*===>EJERCICIO 20 NUMERO DEL MEDIOs<===*
-    /* 
+    /*
     static void myMidNumber(){
         Scanner sc = new Scanner(System.in);
         int tamaño = 3;
@@ -288,9 +288,9 @@ public class EjerciciosElementalesGF {
     }
     */
     //*===>EJERCICIO 22 DIGITOS PARES<===*
-    /* 
+    /*
     static void myNumeroPar(Integer numero){
-    String cadena = numero.toString(); 
+    String cadena = numero.toString();
     int tamaño = cadena.length();
     int count = 0;
     for(int i = 0; i<tamaño; i++){
@@ -305,7 +305,7 @@ public class EjerciciosElementalesGF {
     }
     */
     //*===>EJERCICIO 23 CONTAR VOCALES<===*
-     /* 
+     /*
         static void contarVocales(String palabra){
             String vocales = "aeiou";
             int suma = 0;
@@ -322,9 +322,9 @@ public class EjerciciosElementalesGF {
             }
             else{
                 System.out.println("no todos los caracteres de la palabra "+ palabra + " son vocales\n" + "vocales: " +  suma + "/" + palabra.length());
-            } 
-        
-        }   
+            }
+
+        }
     */
     //*===>EJERCICIO 24 DAR VUELTA A STRING<===*
     /*
@@ -335,6 +335,11 @@ public class EjerciciosElementalesGF {
         System.out.println("\n");
         }
     */
+    //*===>EJERCICIO 25 CALCULAR GCD<===*
+    public int gcd(int a, int b) {
+        if (b==0) return a;
+        return gcd(b,a%b);
+     }
     //!}
     public static void main(String[] args) {
     //!=====> EJERCICIO 1 <=====!
@@ -643,7 +648,7 @@ public class EjerciciosElementalesGF {
     */
     //!EJERCICIO 15 MATRIZ NxN METODO
    // myMatrix(8);
-    /*  
+    /*
     Random rnd = new Random();
     for(int i = 0; i< 10; i++){
        Boolean j = rnd.nextBoolean();
@@ -658,19 +663,19 @@ public class EjerciciosElementalesGF {
     //? pasar (lado1,lado2,lado3)
     // myArea(14,22,12);
     //!EJERCICIO 17 NºPRIMOS GEMELOS
-    //esPrimo(17);    
+    //esPrimo(17);
     //primosGemelos(150);
     //!EJERCICIO 18 DIGITOS DE UN NUMERO
     //digitos(44444, '1');
     //!EJERCICIO 19 NºCONSECUTIVOS
-    /* 
+    /*
     Scanner sc = new Scanner(System.in);
     int n;
     boolean consecutivo = true;
     System.out.println("cuantos numeros quieres introducir");
     n = sc.nextInt();
     int array[] = new int[n];
-    
+
     for(int i = 0; i<n ; i++){
         System.out.println("introduce el numero " + i);
         array[i] = sc.nextInt();
@@ -682,14 +687,28 @@ public class EjerciciosElementalesGF {
             }
         }
      }
-     if(!consecutivo){
+     if(!consecutivo){  
         System.out.println("La cadena no es consecutiva");
      } else System.out.println("La cadena es consecutiva");
-     
+
      */
     ////!EJERCICIO 20 NUMERO DEL MEDIO
      // myMidNumber();
     ///!EJERCICIO 21 METODO NUMERO COMO FACTOR
+    ArrayList<Integer> primos = new ArrayList<Integer>();
+    int num = 432;
+    int divisor = 2;
+    System.out.print(num + " = ");
+    while(num != 1) {
+        if(num % divisor == 0){
+            primos.add(divisor);
+            num = num / divisor;
+        }else {
+            divisor++;
+        }
+    }
+    System.out.print(primos.toString().replaceAll("," , " *"));
+
     ////!ERJECICIO 22 DIGITOS PARES
     //myNumeroPar(435);
     ////!ERJECICIO 23 DIGITOS PARES
@@ -698,14 +717,25 @@ public class EjerciciosElementalesGF {
     ////!ERJECICIO 24 DAR VUELTA A UN STRING
     //myPalabra("HOLAMUNDO1234");
     ///////////
+    ////!ERJECICIO 25 CALCULAR GCD(MAXIMO COMUN DIVISOR)
+    /*
+    int n1 = 22, n2 = 46;
+    int gcd = 1;
+
+    for (int i = 1; i <= n1 && i <= n2; ++i) {
+      if (n1 % i == 0 && n2 % i == 0)
+        gcd = i;
+    }
+    System.out.println("MAXIMO COMUN DIVISOR DE " + n1 +" Y " + n2 + " ES " + gcd);
+    */
    ////!ERJECICIO 27 TABLA DE MULTIPLICAR
-    // int matriz[][][];
+   /*
     Scanner sc = new Scanner(System.in);
     System.out.println("Tamaño del array?");
     int tamaño = sc.nextInt();
     int array[] = new int[tamaño];
     int matrix[][] = new int[tamaño][11];
-    
+
      for(int i = 0; i < tamaño; i++){
         System.out.println("Introduce el numero " + i);
         array[i] = sc.nextInt();
@@ -716,11 +746,11 @@ public class EjerciciosElementalesGF {
         }
          System.out.println("las tablas de multiplicar de 1 a 10 de los numeros " + array[i] + " son");
     }
-   
+
         for (int[] matriz : matrix) {
             System.out.println(Arrays.toString(matriz));
          };
-    
+    */
 
 
 
