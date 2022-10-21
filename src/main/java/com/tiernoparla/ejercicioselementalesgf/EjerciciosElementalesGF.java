@@ -256,10 +256,10 @@ public class EjerciciosElementalesGF {
 
             }//?IF
         }//?FOR
-    }
+    } 
     */
     //*===>EJERCICIO 18 CALCULAR TODOS LOS DIGITOS X<===*
-    
+    /* 
     static void digitos(Integer n, char x){
         int count = 0;
         for(int i = 0; i< n.toString().length(); i++){
@@ -271,7 +271,7 @@ public class EjerciciosElementalesGF {
         System.out.println("el numero " + n + " contiene el digito " + x + " " + count + " veces");
 
     }
-    
+    */
     //*===>EJERCICIO 20 NUMERO DEL MEDIOs<===*
     /*
     static void myMidNumber(){
@@ -336,10 +336,6 @@ public class EjerciciosElementalesGF {
         }
     */
     //*===>EJERCICIO 25 CALCULAR GCD<===*
-    public int gcd(int a, int b) {
-        if (b==0) return a;
-        return gcd(b,a%b);
-     }
     //!}
     public static void main(String[] args) {
     //!=====> EJERCICIO 1 <=====!
@@ -695,8 +691,9 @@ public class EjerciciosElementalesGF {
     ////!EJERCICIO 20 NUMERO DEL MEDIO
      // myMidNumber();
     ///!EJERCICIO 21 METODO NUMERO COMO FACTOR
+    /* 
     ArrayList<Integer> primos = new ArrayList<Integer>();
-    int num = 432;
+    int num = 42; 
     int divisor = 2;
     System.out.print(num + " = ");
     while(num != 1) {
@@ -708,7 +705,7 @@ public class EjerciciosElementalesGF {
         }
     }
     System.out.print(primos.toString().replaceAll("," , " *"));
-
+    */
     ////!ERJECICIO 22 DIGITOS PARES
     //myNumeroPar(435);
     ////!ERJECICIO 23 DIGITOS PARES
@@ -718,11 +715,11 @@ public class EjerciciosElementalesGF {
     //myPalabra("HOLAMUNDO1234");
     ///////////
     ////!ERJECICIO 25 CALCULAR GCD(MAXIMO COMUN DIVISOR)
-    /*
-    int n1 = 22, n2 = 46;
+    /* 
+    int n1 = 14, n2 = 49;
     int gcd = 1;
 
-    for (int i = 1; i <= n1 && i <= n2; ++i) {
+    for (int i = 1; i <= n1 && i <= n2; i++) {
       if (n1 % i == 0 && n2 % i == 0)
         gcd = i;
     }
