@@ -2,6 +2,8 @@ package com.tiernoparla.ejercicioselementalesgf;
 import java.util.*;
 // import java.lang.Math;
 
+import javax.sound.sampled.SourceDataLine;
+
 public class EjerciciosElementalesGF {
     //!FUNCIONES{
     //*===>EJERCICIO 5 METODO CAPICUA <===*
@@ -833,8 +835,19 @@ public class EjerciciosElementalesGF {
        System.out.println(cuenta);
     */
     //!EJERCICIO 35 Hacer un juego de adivinar un N. El juego va diciendo "mayor" "menor" hasta que se acierta.
-        int n = Math.random();
-        System.out.println(n)
+    Scanner sc = new Scanner(System.in);
+    double n = 15;
+  System.out.println("Adivina el numero aleatorio ");
+    int numeroIntroducido = 0;
+    do{
+          System.out.println("introduce un numero");
+          numeroIntroducido = sc.nextInt();
+          if(numeroIntroducido < n){
+              System.out.println("\u001B[31m" + numeroIntroducido + " es mas pequeño que n  " + "\u001B[37m");
+          }else System.out.println("\u001B[31m" + numeroIntroducido + " es mas grande que n" + "\u001B[37m");
+    }while(numeroIntroducido != n);
+    System.out.println("\u001B[32m" + "el numero introducido es correcto");
+        
 
     } //TODOPSVM
 }//TODOFINAL
