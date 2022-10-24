@@ -748,11 +748,18 @@ public class EjerciciosElementalesGF {
             System.out.println(Arrays.toString(matriz));
          };
     */
+        System.out.println("hola mundo");
 
-
-
-
-
+        Integer tamaño = 5;
+        char matriz[][] = new char[5][5];
+        for(int i = 0; i< tamaño; i++){
+           for(int j = 0; j<tamaño; j++){
+            matriz[i][j] = '*';
+               System.out.print(matriz[i][j]);
+           }
+           System.out.println(" ");  
+        }
+      
 
 
 
