@@ -748,8 +748,8 @@ public class EjerciciosElementalesGF {
             System.out.println(Arrays.toString(matriz));
          };
     */
-        System.out.println("hola mundo");
-
+    ////!ERJECICIO 28 CUADRADO DE n*n
+    /* 
         Integer tamaño = 5;
         char matriz[][] = new char[5][5];
         for(int i = 0; i< tamaño; i++){
@@ -759,14 +759,79 @@ public class EjerciciosElementalesGF {
            }
            System.out.println(" ");  
         }
-      
+    */
+    ////!ERJECICIO 29 contador de 5 dígitos X-X-X-X-X que vaya de todo ceros a todo 9s y cambie los 3s por E
+    // ArrayList<Integer> primos = new ArrayList<Integer>();
+    //     for(int i = 0; i<5 ; i++){
+    //          primos.add(0);
+           
+    //     }
+   
 
+ 
 
+    ////!ERJECICIO 31 dado X, mostrar X^2, hasta que se meta un negativo
+    /* 
+        //Integer array[] = {1,15,22,43,2,4,8,-7,101,24};
+        //Integer arrVacio[] = new Integer[10];
+        //for(int i = 0; i< 10; i++){
+        //    arrVacio[i] = array[i] * array[i];
+        //    if(array[i] < 0){
+        //        break;
+        //    }
+        //    System.out.println(arrVacio[i]);
+        //}
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduce el numero que quieres ^2");
+        int numero = sc.nextInt();
+        if(numero >=0){
+            numero *= numero;
+            System.out.println(numero);
+        }
+        else{
+            System.out.println("el numero es negativo");
+        }
+        */
 
-
-
-
-
+       ////!ERJECICIO 32 leer X y decir si es < o > 0. Acaba cuando metes 0
+       /* 
+       int array[] = {2,5,545,1,-12,55,-66,-1,0,34,-3,5};
+       for(int i = 0; i<12; i++){
+        if(array[i] > 0){
+            System.out.println("El numero " + array[i] + " es mayor que 0");
+        }
+        else if( array[i]> 0){
+            System.out.println("el Numero " + array[i] + " es menor que 0");
+        }   
+        else break;
+       }
+       */
+       ////!ERJECICIO 33 Leer nums hasta que se meta 0. Ir diciendo si son pares o impares
+       /* 
+       int array[] = {2,5,545,1,-12,55,-66,-1,0,34,-3,5};
+       for(int i = 0; i<12; i++){
+        if( array[i] == 0){
+            break;
+        }
+        else if(array[i] % 2 == 0){
+            System.out.println("El numero " + array[i] + " Es par");
+        }
+        else System.out.println("el Numero " + array[i] + " es Impar");
+       }
+       */
+      ////!ERJECICIO 34  leer números hasta que se meta uno negativo. Decir cuantos se han metido.
+      /* 
+      int array[] = {2,5,545,1,-12,55,-66,-1,0,34,-3,5};
+      int cuenta = 0;
+      for(int i = 0; i<12; i++){
+        if(array[i] > 0){
+            System.out.println("El numero " + array[i] + " es mayor que 0");
+            cuenta++;
+        }
+        else break;
+       }
+       System.out.println(cuenta);
+    */
 
 
 
