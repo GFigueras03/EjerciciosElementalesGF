@@ -832,8 +832,9 @@ public class EjerciciosElementalesGF {
        }
        System.out.println(cuenta);
     */
-
-
+    //!EJERCICIO 35 Hacer un juego de adivinar un N. El juego va diciendo "mayor" "menor" hasta que se acierta.
+        int n = Math.random();
+        System.out.println(n)
 
     } //TODOPSVM
 }//TODOFINAL
