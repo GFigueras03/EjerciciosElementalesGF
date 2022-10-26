@@ -1004,8 +1004,52 @@ public class EjerciciosElementalesGF {
     System.out.println(nums);
     System.out.println(factorial);
    */
+  //!EJERCICIO 43 pedir 10 nums x pantalla. Calcular media de positivos, negativos, y num ceros
+  /* 
+    Scanner sc = new Scanner(System.in);
+    final int Tamaño  = 10;
+    int cuentaPositivos = 0, cuentaNegativos = 0, sumaNegativos = 0, sumaPositivos = 0 , sumaCeros = 0;
+    int array[] = new int[Tamaño];
+
+    System.out.println("Introduce 10 numeros");
+    for(int i = 0; i<Tamaño; i++){
+        array[i] = sc.nextInt();
+        if(array[i] > 0){
+            sumaPositivos += array[i];
+            cuentaPositivos++;
+        }
+        else if( array[i] < 0){
+            sumaNegativos += array[i];
+            cuentaNegativos++;
+        }
+        else sumaCeros++;
+    }
+    double positivos = sumaPositivos / cuentaPositivos;
+    double negativos = sumaNegativos / cuentaNegativos;
+    int ceros = sumaCeros;
+
+    System.out.println("la media de numeros positivos es igua a :" + positivos);
+    System.out.println("la media de numeros negativos es igua a :" + negativos);
+    System.out.println("la cantidad de 0 es igua a: " + ceros);
+    */
+    //!EJERCICIO 44 PEDIR 10 SUELDOS, CUANTOS SON MAYORES DE 1000
+    /* 
+    Scanner sc = new Scanner(System.in);
+    final int numeroSueldos = 10;
+    int cuenta = 0;
+    int array[] = new int[numeroSueldos];
+    System.out.println("Introduce 10 sueldos");
+    for(int i = 0; i<numeroSueldos; i++){
+        array[i] = sc.nextInt();
+        if(array[i] <= 1000){
+            cuenta++;
+        }
+    }
+    System.out.println(cuenta + " sueldos son iguales o mayores de 1000 Euros");
+    */
+    
    //!EJERCICIO 45 edad alumnos
- 
+    /* 
     Persona juan = new Persona("Juan", 15, 1.69);
     Persona maria = new Persona("Maria", 23, 1.58);
     Persona david = new Persona("David", 18, 1.76);
@@ -1036,7 +1080,18 @@ public class EjerciciosElementalesGF {
             System.out.println(array[i].nombre + " es mayor de edad, tiene: " + array[i].edad +"\n");
         }
     }
- 
+    */
+      //!EJERCICIO 46 user mete número, y programa da su tabla de multiplicar
+    /* 
+    Scanner sc = new Scanner(System.in);
+    final int Tamaño = 11;
+    System.out.println("Escoge el numero a multiplicar");
+    int numero = sc.nextInt();
+    for(int i = 1; i<Tamaño; i++){;
+        System.out.println(numero + "*" + i + " es igual a: " + numero*i);
+    }   
+    */
+    //!EJERCICIO 47 EMPRESA
 
     } // TODOPSVM
 }// TODOFINAL
