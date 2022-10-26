@@ -4,6 +4,7 @@ import java.util.*;
 // import java.lang.Math;
 
 import javax.sound.sampled.SourceDataLine;
+import javax.swing.text.TabExpander;
 
 public class EjerciciosElementalesGF {
     // !FUNCIONES{
@@ -812,7 +813,7 @@ public class EjerciciosElementalesGF {
     }
     */
     ////!ERJECICIO 29 contador de 5 dígitos X-X-X-X-X que vaya de todo ceros a todo 9s y cambie los 3s por 
-    /*
+    /* 
     final int tamañoArray = 5;
     int array[] = new int[tamañoArray];
         for(int i = 0; i<10; i++){
@@ -831,7 +832,8 @@ public class EjerciciosElementalesGF {
                 }
             }
         }
-    */
+        
+    
     //*MODO PROFE
     /*
         final int TAM = 5;
@@ -942,7 +944,7 @@ public class EjerciciosElementalesGF {
      System.out.println(cuenta);
      */
     //!EJERCICIO 38 Pedir N, mostrar todos los números de 1 a N
-    /*
+    /* 
     Scanner sc = new Scanner(System.in);
     System.out.println("Introduce un numero");
     int numero = sc.nextInt();
@@ -951,7 +953,90 @@ public class EjerciciosElementalesGF {
     }
     */
     //!EJERCICIO 39 escribir todos los núemros de 0 a 100 de 7 en 7 (0,1,2,3,4,5,6, \n 7,8,9,10..)
-
+    /* 
+    int cuenta = 0;
+    for(int i = 1; i<100; i++){
+        System.out.print(i + " ");
+        cuenta++;
+        if(cuenta == 7){
+            System.out.println("");
+            cuenta = 0;
+        }
+    }
+    */
+    //!EJERCICIO 40 PEDIR 15 NUMEROS Y ESCRIBIR LA SUMA
+    /*
+    Scanner sc = new Scanner(System.in);
+    final int TAMAÑO = 5;
+    int suma = 0;
+    int array[] = new int[TAMAÑO];
+    System.out.println("Escribe "+ TAMAÑO + " numeros");
+    for(int i = 0; i<TAMAÑO; i++){
+        array[i] = sc.nextInt();
+        suma = suma + array[i];
+    }
+    System.out.println("la suma de " + Arrays.toString(array) + " es igual a: ");
+    System.out.println(suma);
+    */
+    //!EJERCICIO 41 CALCULAR EL PRODUCTO DE LOS 10 PRIMEROS IMPARES
+    /* 
+    ArrayList<Integer> nums = new ArrayList<Integer>();
+    final int TAMAÑO = 20;
+    int producto = 1;
+    for(int i = 0; i<20; i++){
+        if(i%2 != 0){
+            nums.add(i);
+            producto = producto * i;
+        }
+    }
+    System.out.println(nums);
+    System.out.println(producto);
+   */
+   //!EJERCICIO 42 CALCULAR FACTORIAL DE N
+   /* 
+    ArrayList<Integer> nums = new ArrayList<Integer>();
+    int n = 5;
+    int factorial = 1; 
+    for(int i = 1; i<= n; i++){
+        factorial = factorial * i;
+        nums.add(i);
+    }
+    System.out.println(nums);
+    System.out.println(factorial);
+   */
+   //!EJERCICIO 45 edad alumnos
+ 
+    Persona juan = new Persona("Juan", 15, 1.69);
+    Persona maria = new Persona("Maria", 23, 1.58);
+    Persona david = new Persona("David", 18, 1.76);
+    Persona pablo = new Persona("Pablo", 19, 1.73);
+    Persona ana = new Persona("Ana", 12, 1.63);
+    Persona silvia = new Persona("Silvia", 21, 1.60);
+    Persona array[] = {juan, maria, david, pablo, ana, silvia};
+    final int NumerodePersonas = array.length;
+    //!MEDIA DE EDAD
+    int sumaEdades = 0;
+    int edadMedia;
+    //! MEDIA DE ALTURA;
+    Double sumaAlturas = 0.0;
+    Double alturaMedia;
+    
+    for(int i = 0; i<NumerodePersonas; i++){
+        sumaEdades = sumaEdades + array[i].myEdad();
+        sumaAlturas = sumaAlturas + array[i].myAltura();
+    }//*BUCLE REUTILIZADO PARA EDAD Y ALTURA *
+    alturaMedia = sumaAlturas / NumerodePersonas; 
+    edadMedia = sumaEdades/NumerodePersonas;
+    System.out.println("la edad media de personas es de " + edadMedia + " años \n"); //?RESULTADO EDAD MEDIA
+    System.out.println("la altura media de personas es de " + alturaMedia + " metros \n"); //?RESULTADO ALTURA MEDIA
+    //!MAYORES DE EDAD
+    System.out.println("Las personas mayores de edad son: \n");
+    for(int i = 0; i<NumerodePersonas; i++){
+        if(array[i].myEdad() >= 18){
+            System.out.println(array[i].nombre + " es mayor de edad, tiene: " + array[i].edad +"\n");
+        }
+    }
+ 
 
     } // TODOPSVM
 }// TODOFINAL
