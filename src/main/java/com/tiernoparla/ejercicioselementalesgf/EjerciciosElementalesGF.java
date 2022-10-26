@@ -236,6 +236,7 @@ public class EjerciciosElementalesGF {
       }
      */
     // *===>EJERCICIO 17 NUMEROS PRIMOS GEMELOS<===*
+      
     /*
       //!METODO DECIR SI UN NUMERO ES PRIMO
       static void esPrimo(int numero){
@@ -386,8 +387,16 @@ public class EjerciciosElementalesGF {
         }//if
         return digits[pos];
     }//updateThis
-
+  
     */
+    // *===>EJERCICIO RECURSIVO<===*
+    public static int recursivo(int n){
+        for(int i = 1; i<n; i++){
+            System.out.println(i);
+            n = i;
+        }
+        return n;
+    }
     // !}
     public static void main(String[] args) {
     //!=====> EJERCICIO 1 <=====!
@@ -1092,6 +1101,94 @@ public class EjerciciosElementalesGF {
     }   
     */
     //!EJERCICIO 47 EMPRESA
+    /*
+    int sumaFacturacionTotal = 0;
+    int cuenta = 0;
+    Facturas artUno = new Facturas("artUno", 5, 6.0);
+    Facturas artDos = new Facturas("artDos", 10, 12.0);
+    Facturas artTres = new Facturas("artTres", 42, 15.0);
+    Facturas artCuatro = new Facturas("artCuatro", 2, 7.0);
+    Facturas artCinco = new Facturas("artCinco", 8, 50.0);
+    Facturas[] allArticles = {artUno, artDos, artTres, artCuatro, artCinco};
 
+    //?FACTURACION TOTAL =
+    for(int i = 0; i< allArticles.length; i++){
+        sumaFacturacionTotal += allArticles[i].facturacionTotal(); 
+    }
+    System.out.println("La facturacion total de los cinco articulos es: " + sumaFacturacionTotal + " Euros/Litro");
+    System.out.println("la cantidad de litros vendidos del Articulo 1 son: " + artUno.cantVendida + " Litros");
+    for(int i = 0; i< allArticles.length; i++){
+        if(allArticles[i].facturacionTotal() > 600.0){
+            cuenta++;
+            System.out.println("El " + allArticles[i].codArticulo +
+            " Supera los 600 Euros de facturacion \nLa cantidad de articulos que superan los 600 E son: " 
+            + cuenta);
+        } 
+    }
+    */
+    //!EJERCICIO 48 Dadas 6 notas, escribir la cantidad de alumnos aprobados, condicionados (=4) y suspensos
+    /*
+    int notas[] = {8,2,5,4,6,0,3,5,4,10};
+    for(int i = 0; i < notas.length; i++){
+        if(notas[i]>= 5){
+            System.out.println("La nota " + notas[i] + " Esta aprobada");
+        }
+        else if(notas[i]>=0 && notas[i]< 4){
+            System.out.println("La nota " + notas[i] + " Esta Suspensa");
+        }
+        else{
+            System.out.println("La nota " + notas[i] + " Esta condicionada");
+        }
+    }
+    */
+    //!EJERCICIO 49 Pedir un número N, introducir N nums, y mostrar el num máximo/minimo.
+    /*
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Cuantos numeros quieres introducir?");
+    int cantidadNumeros = sc.nextInt();
+    int numeros[] = new int[cantidadNumeros];
+  
+    for(int i = 0 ; i< numeros.length; i++){
+        System.out.println("Introduce el numero " + i);
+        numeros[i] = sc.nextInt();
+    }
+    */
+    /*
+    int min = numeros[0], max = numeros[0];
+    for(int i = 0; i< numeros.length; i++){
+        if(min > numeros[i]){
+            min = numeros[i];
+        }
+    }
+    for(int i = 0; i< numeros.length; i++){
+        if(max < numeros[i]){
+            max = numeros[i];
+        }
+    }
+    System.out.println("El numero mas pequeño es: " + min);
+    System.out.println("El numero mas grande es: " + max);
+    */
+    //! EJERCICIO 50 Pedir 10 números, y mostrar al final si se ha introducido alguno negativo.
+    //?DEPENDE DEL DE ARRIBA
+    /*
+    int cuenta = 0;
+    for(int i = 0; i< numeros.length; i++){
+        if(numeros[i]>0){
+            System.out.println(true);
+            break;
+        }
+        else System.out.println(false);
+    }
+    */
+     //! EJERCICIO 51 Pedir 5 numeros e indicar si alguno es multiplo de 3
+     /*
+    for(int i = 0; i< numeros.length; i++){
+        if(numeros[i] %3 == 0){
+            System.out.println(numeros[i] + " es multiplo de 3");
+        }
+    }
+    */
+    //! EJERCICIO 52 
+      recursivo(15);
     } // TODOPSVM
 }// TODOFINAL
